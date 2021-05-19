@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">AS91906GordonChengXinLo</string>
+    <!--Mainactivity text-->
+    <string name="app_name">Gordon_cheng_xin_lo_AS91906</string>
+    <string name="App">School</string>>
+    <string name="Timetable_button_name">Timetable</string>
+    <string name="Content_share_button_name">Resource</string>
+    <string name="Revision_button_name">Revision</string>
+    <string name="Kamar_button_name">Kamar</string>
+
+    <!--Heading text-->
+    <string name="Timetable_heading">Time Table</string>
+    <string name="Resource_heading">Resource</string>
+    <string name="Revision_heading">Revision</string>
+    <string name="Kamar_heading">Kamar</string>
+
+
+    <!--Basic layout text-->
+    <string name="Account_button_name">Account</string>
+    <string name="Home_button_name">Home</string>
+    <string name="Return_button_name">Return</string>
+
+
 </resources>
