@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/SchoolGridView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    android:padding="2dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/ClassNameGirdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_centerHorizontal="true"
+        tools:text="@string/SchoolTimetable_Class" />
+
+    <TextView
+        android:id="@+id/ClassTimeGirdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ClassNameGirdView"
+        android:layout_centerHorizontal="true"
+        tools:text="Time" />
+
+    <TextView
+        android:id="@+id/ClassLocationGirdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ClassTimeGirdView"
+        android:layout_centerHorizontal="true"
+        tools:text="location" />
+
+    <TextView
+        android:id="@+id/ClassStartTimeGirdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ClassLocationGirdView"
+        android:layout_centerHorizontal="true"
+        tools:text="@string/SchoolTimetable_StartingTime" />
+
+    <TextView
+        android:id="@+id/ClassEndTimeGirdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ClassStartTimeGirdView"
+        android:layout_centerHorizontal="true"
+        tools:text="@string/SchoolTimetable_EndingTime" />
+
+    <!--
+    <ImageView
+        android:id="@+id/TuesdayimageView"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_toRightOf="@id/MondayimageView"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        />
+
+    <TextView
+        android:id="@+id/TuesdayClassNameGirdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TuesdayimageView"
+        android:layout_toRightOf="@id/MondayimageView"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/TuesdayClassTimeGirdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TuesdayClassNameGirdView"
+        android:layout_toRightOf="@id/MondayimageView"
+        android:text="Time" />
+
+    <TextView
+        android:id="@+id/ThrusdayClassLocationGirdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TuesdayClassTimeGirdView"
+        android:layout_toRightOf="@id/MondayimageView"
+        android:text="location" />
+
+    <ImageView
+        android:id="@+id/WednesdayimageView"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_toRightOf="@id/TuesdayimageView"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        />
+
+    <TextView
+        android:id="@+id/WednesdayClassNameGirdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/WednesdayimageView"
+        android:layout_toRightOf="@id/TuesdayimageView"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/WednesdayClassTimeGirdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/WednesdayClassNameGirdView"
+        android:layout_toRightOf="@id/TuesdayimageView"
+        android:text="Time" />
+
+    <TextView
+        android:id="@+id/WednesdayClassLocationGirdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/WednesdayClassTimeGirdView"
+        android:layout_toRightOf="@id/TuesdayimageView"
+        android:text="location" />
+
+    <ImageView
+        android:id="@+id/ThursdayimageView"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_toRightOf="@id/WednesdayimageView"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        />
+
+    <TextView
+        android:id="@+id/ThursdayClassNameGirdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ThursdayimageView"
+        android:layout_toRightOf="@id/WednesdayimageView"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/ThursdayClassTimeGirdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ThursdayClassNameGirdView"
+        android:layout_toRightOf="@id/WednesdayimageView"
+        android:text="Time" />
+
+    <TextView
+        android:id="@+id/ThursdayClassLocationGirdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ThursdayClassTimeGirdView"
+        android:layout_toRightOf="@id/WednesdayimageView"
+        android:text="location" />
+
+    <ImageView
+        android:id="@+id/FirdayimageView"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_toRightOf="@id/ThursdayimageView"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        />
+
+    <TextView
+        android:id="@+id/FirdayClassNameGirdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/FirdayimageView"
+        android:layout_toRightOf="@id/ThursdayimageView" />
+
+    <TextView
+        android:id="@+id/FirdayClassTimeGirdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/FirdayClassNameGirdView"
+        android:layout_toRightOf="@id/ThursdayimageView"
+        android:text="Time" />
+
+    <TextView
+        android:id="@+id/FirdayClassLocationGirdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/FirdayClassTimeGirdView"
+        android:layout_toRightOf="@id/ThursdayimageView"
+        android:text="location" />
+-->
+
+</RelativeLayout>
+

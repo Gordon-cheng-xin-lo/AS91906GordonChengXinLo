@@ -20,10 +20,6 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
     HomeworkList[] data;
     Context context;
 
-    public static final String Class_MESSAGE = "Text Entry App";
-    public static final String Name_MESSAGE = "Text Entry App";
-    public static final String Date_MESSAGE = "Text Entry App";
-    public static final String Inform_MESSAGE = "Text Entry App";
 
 
     public HomeworkRecyclerView(Context context, HomeworkList[] data) {
@@ -55,6 +51,29 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
         holder.DataView_Name_Label.setText("Name");
         holder.DataView_Information_Label.setText("Detail");
 
+        holder.DeleteHMButton.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("LongLogTag")
+            @Override
+            public void onClick(View v) {
+                Log.d("Delete Button click>>>>>>>>>>>>>>>>>>>>>","Delete ButtonClick");
+
+                String DeleteClass = String.valueOf(data[position]);
+
+
+                AlertDialog.Builder Warning = new AlertDialog.Builder(context);
+                Warning.setMessage("Is that you want to Delete"+DeleteClass+" Homework Form the Phone");
+                Warning.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Log.d("Position of the list===================","The position of the string  value is "+position);
+
+
+                    }
+                });
+                Warning.show();
+
+            }
+        });
     }
 
     @Override

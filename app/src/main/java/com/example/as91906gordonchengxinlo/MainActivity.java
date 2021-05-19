@@ -7,7 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.example.as91906gordonchengxinlo.Kamar;
+import com.example.as91906gordonchengxinlo.R;
+import com.example.as91906gordonchengxinlo.Resource;
+import com.example.as91906gordonchengxinlo.Revision;
+import com.example.as91906gordonchengxinlo.Timetable;
 
 public class MainActivity extends AppCompatActivity {
 
