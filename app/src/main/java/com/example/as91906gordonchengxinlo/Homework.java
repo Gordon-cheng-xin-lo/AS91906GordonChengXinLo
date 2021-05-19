@@ -9,11 +9,42 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class Homework extends AppCompatActivity {
+    RecyclerView HomeworkRecyclerView;
+    HomeworkRecyclerView adapter;
+
+    HomeworkList[] Homework_Information ={
+            new HomeworkList("3/6/2021","CSC","Programming","20 Credits"),
+            new HomeworkList("4/6/2021","CAL","Complex Number","Test"),
+            new HomeworkList("5/5/2021","PHY","MACH","Test"),
+            new HomeworkList("6/8/2021","PHT","Platelle","Internal"),
+
+    };
+
+/*
+    String HM = Arrays.toString(new HomeworkList[]{
+
+            new HomeworkList("3/6/2021","CSC","Programming","20 Credits"),
+            new HomeworkList("4/6/2021","CAL","Complex Number","Test"),
+            new HomeworkList("5/5/2021","PHY","MACH","Test"),
+            new HomeworkList("6/8/2021","PHT","Platelle","Internal"),
+    });
+*/
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homework);
+        getSupportActionBar();
+
+
+        HomeworkRecyclerView= findViewById(R.id.Homewok_Recycleview);
+        HomeworkRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+
+
+        adapter = new HomeworkRecyclerView(this,Homework_Information);
+        HomeworkRecyclerView.setAdapter(adapter);
 
     }
 
