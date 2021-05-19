@@ -1,12 +1,16 @@
 package com.example.as91906gordonchengxinlo;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class Homework extends AppCompatActivity {
     RecyclerView HomeworkRecyclerView;
@@ -69,5 +73,5 @@ public class Homework extends AppCompatActivity {
         finish();
     }
 
-    
+
 }

@@ -1,12 +1,13 @@
 package com.example.as91906gordonchengxinlo;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 public class NewHomework extends AppCompatActivity {
 
@@ -36,7 +37,7 @@ public class NewHomework extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 /*Update the date class  function and restart the activity
-                * also update the homework activity*/
+                 * also update the homework activity*/
 
                 finish();
             }

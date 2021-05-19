@@ -1,5 +1,7 @@
 package com.example.as91906gordonchengxinlo;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -7,8 +9,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 public class EditHomeWork extends AppCompatActivity {
 
@@ -34,8 +34,8 @@ public class EditHomeWork extends AppCompatActivity {
 
     public void Save_change(View aView) {
         /*
-        * up data the setting by the get value and update to the list by showing the text view
-        * */
+         * up data the setting by the get value and update to the list by showing the text view
+         * */
 
         /*Edit.putExtra()*/
         TextView EditedClass = (TextView)findViewById(R.id.HM_Edit_Class);
@@ -72,11 +72,11 @@ public class EditHomeWork extends AppCompatActivity {
         AlertDialog.Builder Warning = new AlertDialog.Builder(EditHomeWork.this);
         Warning.setMessage("Is that you want to leave and Not save the change");
         Warning.setPositiveButton("Leave", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        finish();
-                    }
-                });
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
         Warning.show();
     }
 

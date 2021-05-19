@@ -10,10 +10,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.List;
 
 public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerView.ViewHolder>
 {
@@ -39,12 +43,12 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position)
+    public void onBindViewHolder(@NonNull HomeworkRecyclerView.ViewHolder holder, int position)
     {
         /*Got problem showing the content on the list solve it later on at school day
-        *        *
-        * setText is the correct function for the call but the call detail is having problem
-        * */
+         *        *
+         * setText is the correct function for the call but the call detail is having problem
+         * */
 
         holder.DataView_Date.setText(String.valueOf(data[position]));
         holder.DataView_ClassName.setText(String.valueOf(data[position]));
@@ -111,7 +115,7 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
         Button EditHMButton;
         Button DeleteHMButton;
 
-        
+
         ViewHolder(View itemView)
         {
             super(itemView);
