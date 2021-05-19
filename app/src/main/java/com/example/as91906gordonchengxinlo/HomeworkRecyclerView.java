@@ -20,6 +20,10 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
     HomeworkList[] data;
     Context context;
 
+    public static final String Class_MESSAGE = "Text Entry App";
+    public static final String Name_MESSAGE = "Text Entry App";
+    public static final String Date_MESSAGE = "Text Entry App";
+    public static final String Inform_MESSAGE = "Text Entry App";
 
 
     public HomeworkRecyclerView(Context context, HomeworkList[] data) {
@@ -50,7 +54,20 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
         holder.DataView_ClassName_Label.setText("Class");
         holder.DataView_Name_Label.setText("Name");
         holder.DataView_Information_Label.setText("Detail");
+        holder.EditHMButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("click","Click");
+                Intent Edit = new Intent(context,EditHomeWork.class);
 
+                Edit.putExtra(Class_MESSAGE,String.valueOf(data[position]));
+                Edit.putExtra(Name_MESSAGE,String.valueOf(data[position]));
+                Edit.putExtra(Date_MESSAGE,String.valueOf(data[position]));
+                Edit.putExtra(Inform_MESSAGE,String.valueOf(data[position]));
+                /*Edit.putExtra()*/
+                context.startActivity(Edit);
+            }
+        });
         holder.DeleteHMButton.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("LongLogTag")
             @Override

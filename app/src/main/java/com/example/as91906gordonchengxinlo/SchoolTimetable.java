@@ -21,6 +21,13 @@ public class SchoolTimetable extends AppCompatActivity {
 
     GridView gridView;
 
+    public static final String ClassName_MESSAGE = "Text Entry App";
+    public static final String Location_MESSAGE = "Text Entry App";
+    public static final String Day_MESSAGE = "Text Entry App";
+    public static final String StartTime_MESSAGE = "Text Entry App";
+    public static final String EndTime_MESSAGE = "Text Entry App";
+    public static final String Image_MESSAGE = "Text Entry App";
+    public static final String Position_MESSAGE = "Text Entry App";
 
     String[] names = {"Photo1","aaa","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","AAA","","CCC","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo"};
     String[] Day = {"Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday"};
@@ -94,6 +101,48 @@ public class SchoolTimetable extends AppCompatActivity {
             Log.d("ClassNamelenght========================"+i,ClassName[i]+"     length"+String.valueOf(ClassName[i].length()));
 
 
+
+            if ( i <= names.length){
+                if (ClassName[i].length()>=1) {
+                    Log.d("Mission sucess","Mission sucess!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                    ClassNameView.setText(ClassName[i]);
+                    DayView.setText(ClassDay[i]);
+                    LocationView.setText("location");
+                    StartingTimeView.setText("Start at");
+                    EndTimeView.setText("End in");
+                    imageView.setImageResource(imagesPhoto[i]);
+
+                    view.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Log.d("View Clicked========","view Name =======>"+ClassName[i]);
+                            AlertDialog.Builder Detail = new AlertDialog.Builder(SchoolTimetable.this);
+                            Detail.setMessage("Class ==>" + ClassName[i] + "\nDetail\nDay ==>" + ClassDay[i] +"\nLocation ==>" + ClassName[i] +"\nStart at ==>" + ClassName[i] +"\nEnd in ==>" + ClassName[i]);
+                            Detail.setPositiveButton("Edit Schedule", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Log.d("click", "Click");
+                                    Intent Edit = new Intent(context,EditSchoolTimetable.class);
+                                    Edit.putExtra(Image_MESSAGE,String.valueOf(imagesPhoto[i]));
+                                    Edit.putExtra(ClassName_MESSAGE,String.valueOf(ClassName[i]));
+                                    Edit.putExtra(Location_MESSAGE,String.valueOf(ClassName[i]));
+                                    Edit.putExtra(Day_MESSAGE,String.valueOf(ClassDay[i]));
+                                    Edit.putExtra(StartTime_MESSAGE,String.valueOf(ClassName[i]));
+                                    Edit.putExtra(EndTime_MESSAGE,String.valueOf(ClassName[i]));
+                                    Edit.putExtra(Position_MESSAGE,String.valueOf(i));
+                                    context.startActivity(Edit);
+                                    }
+                            });
+                            Detail.show();
+                        }
+                    });
+                }
+                else {
+                    Log.d("OnClick Mission Fall","Mission Fall!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                }}
+            else {
+                Log.d("Gid View Mission Faill>>>>>>>>>>>>>>>>>>>>>","Mission Fall");
+            }
 
             return view;
         }
