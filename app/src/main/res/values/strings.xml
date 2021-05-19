@@ -29,6 +29,34 @@
     <string name="School_timetable_heading_label">School Timetable</string>
     <string name="New_School_timetable">New Schedule</string>>
 
+    <!--School Timetable setting text-->
+    <string name="Confirm_setting_button_name">Confirm And Save</string>
+    <string name="Statement_name">Timetable Setting</string>
+    <string name="Return_statement_name">Back to Table</string>
+    <string name="SchoolTimetable_edit">Editing</string>>
+    <string name="SchoolTimetable_StartingTime">Start at</string>>
+    <string name="SchoolTimetable_EndingTime">End in</string>>
+    <string name="SchoolTimetable_Location">Location</string>>
+    <string name="SchoolTimeTable_Name">Name</string>>
+    <string name="SchoolTimeTable_Inform">Detail</string>>
+    <string name="SchoolTimeTable_Date">Day</string>>
+    <string name="SchoolTimetable_Class">Class</string>>
+
+    <!--Homework text-->
+    <string name="Homework_heading_label">Homework</string>>
+    <string name="HM_Name">Name</string>>
+    <string name="HM_Inform">Detail</string>>
+    <string name="HM_Class">Class</string>>
+    <string name="HM_Date">Date</string>>
+    <string name="HM_New">New Homework</string>>
+    <string name="HM_Addict">Edit</string>>
+    <string name="HM_Delete">Delete</string>>
+
+    <!--Homework edit Text-->
+    <string name="HM_edit_label">Editing</string>>
+    <string name="HM_edit_save">Save change</string>>
+    <string name="HM_edit_unsave">Exit</string>>
+
     <!--Kamar text-->
     <string name="Kamar_Web">Website</string>>
     <string name="Kmaar_WebView">Kamar Website</string>>

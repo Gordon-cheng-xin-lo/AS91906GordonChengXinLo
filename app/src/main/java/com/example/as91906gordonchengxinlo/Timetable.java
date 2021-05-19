@@ -26,6 +26,16 @@ public class Timetable extends AppCompatActivity {
         Intent Homepage_function = new Intent(this,MainActivity.class);
         startActivity(Homepage_function);
         finishAffinity();
+    }
 
+    public void Scooltimetable (View aView) {
+        Intent Schooltimetable_function = new Intent(this,SchoolTimetable.class);
+        startActivity(Schooltimetable_function);
+    }
+
+
+    public void Homework (View aView) {
+        Intent Homework_function = new Intent (this,Homework.class);
+        startActivity(Homework_function);
     }
 }
