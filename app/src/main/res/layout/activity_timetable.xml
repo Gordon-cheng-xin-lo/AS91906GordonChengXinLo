@@ -7,5 +7,92 @@
     android:background="@drawable/tets9"
     tools:context=".Timetable">
 
+    <TextView
+        android:id="@+id/Heading_timatable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="118dp"
+        android:layout_marginLeft="118dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginRight="117dp"
+        android:background="#0044595E"
+        android:text="@string/Timetable_heading"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/Timetable_heading" />
+
+    <Button
+        android:id="@+id/Timetable_account_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:layout_marginBottom="82dp"
+        android:onClick="Return"
+        android:text="@string/Account_button_name"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        app:backgroundTint="#A143778F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Timetable_home_button" />
+
+    <Button
+        android:id="@+id/Timetable_home_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="82dp"
+        android:onClick="Return"
+        android:text="@string/Home_button_name"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        app:backgroundTint="#A143778F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Timetable_account_button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Schooltimetable_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginBottom="58dp"
+        android:text="@string/SchoolTimetable_button_name"
+        android:textSize="30sp"
+        app:backgroundTint="#C444595E"
+        app:layout_constraintBottom_toTopOf="@+id/Homework_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Heading_timatable" />
+
+    <Button
+        android:id="@+id/Homework_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginLeft="104dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginRight="105dp"
+        android:text="@string/Homework_button_name"
+        android:textSize="30sp"
+        app:backgroundTint="#C444595E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Schooltimetable_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

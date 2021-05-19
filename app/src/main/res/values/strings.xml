@@ -19,5 +19,27 @@
     <string name="Home_button_name">Home</string>
     <string name="Return_button_name">Return</string>
 
+    <!--Timetable Button text-->
+    <string name="SchoolTimetable_button_name">School Timetable</string>
+    <string name="Calendar_button_name">Calendar</string>
+    <string name="Homework_button_name">Homework</string>
+
+    <!--School Timetable text-->
+    <string name="Timetable_setting_button_name">Table Setting</string>
+    <string name="School_timetable_heading_label">School Timetable</string>
+    <string name="New_School_timetable">New Schedule</string>>
+
+    <!--Kamar text-->
+    <string name="Kamar_Web">Website</string>>
+    <string name="Kmaar_WebView">Kamar Website</string>>
+
+    <!---->
+    <string name="title_activity_account_setting">AccountSetting</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 
 </resources>
