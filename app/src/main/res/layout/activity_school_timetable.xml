@@ -15,6 +15,7 @@
         android:layout_marginLeft="132dp"
         android:layout_marginEnd="132dp"
         android:layout_marginRight="132dp"
+        android:onClick="New_Homework"
         android:text="@string/New_School_timetable"
         android:textSize="24sp"
         app:backgroundTint="#A171C0E4"
