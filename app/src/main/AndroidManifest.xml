@@ -9,6 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Gordon_cheng_xin_lo_AS91906.">
+
+
+
+        <activity android:name=".EditSchoolTimetable"></activity>
+        <activity android:name=".NewSchoolTimeTable" />
+        <activity android:name=".EditHomeWork" />
+        <activity android:name=".NewHomework" />
+
+        <activity android:name=".Homework" />
+        <activity android:name=".SchoolTimetable" />
+        <activity android:name=".Resource" />
+        <activity android:name=".Revision" />
+        <activity android:name=".Kamar" />
+        <activity android:name=".Timetable" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
