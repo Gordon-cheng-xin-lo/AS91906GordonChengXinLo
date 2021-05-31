@@ -29,8 +29,8 @@ public class SchoolTimetable extends AppCompatActivity {
     public static final String Image_MESSAGE = "Text Entry App";
     public static final String Position_MESSAGE = "Text Entry App";
 
-    String[] names = {"Photo1","aaa","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","AAA","","CCC","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo"};
-    String[] Day = {"Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday"};
+    String[] ClassName = {"Photo1","aaa","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","AAA","","CCC","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo","Photo"};
+    String[] ClassDay = {"Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday","Monday","Tuesday","Wednesday","Thursday","Friday"};
 
     int[] image = {R.drawable.img8458,R.drawable.img8460,R.drawable.img8461,R.drawable.img8463,R.drawable.img8464,R.drawable.img8465,R.drawable.img8467,R.drawable.img8468,R.drawable.img8471,R.drawable.img8472,R.drawable.img8474,R.drawable.img8475,R.drawable.img8478,R.drawable.img8479,R.drawable.img8483,R.drawable.img8484,R.drawable.img8485,R.drawable.img8486,R.drawable.img8488,R.drawable.img8490,R.drawable.img8493,R.drawable.img8494,R.drawable.img8495,R.drawable.img8458,R.drawable.img8460,R.drawable.img8463,R.drawable.img8464,R.drawable.img8465,R.drawable.img8467,R.drawable.img8468,R.drawable.img8471,R.drawable.img8472,R.drawable.img8474,R.drawable.img8475,R.drawable.img8478,R.drawable.img8479,R.drawable.img8483,R.drawable.img8484,R.drawable.img8485,R.drawable.img8486,R.drawable.img8488,R.drawable.img8490,R.drawable.img8493,R.drawable.img8494,R.drawable.img8495,R.drawable.img8495};
 
@@ -41,7 +41,7 @@ public class SchoolTimetable extends AppCompatActivity {
         setContentView(R.layout.activity_school_timetable);
         gridView = findViewById(R.id.SchoolTimeTbale_GridView);
 
-        CustomerAdapter customerAdapter = new CustomerAdapter(names,Day,image,this);
+        CustomerAdapter customerAdapter = new CustomerAdapter(ClassName,ClassDay,image,this);
         gridView.setAdapter(customerAdapter);
     }
 
@@ -102,7 +102,7 @@ public class SchoolTimetable extends AppCompatActivity {
 
 
 
-            if ( i <= names.length){
+            if ( i <= ClassName.length){
                 if (ClassName[i].length()>=1) {
                     Log.d("Mission sucess","Mission sucess!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
                     ClassNameView.setText(ClassName[i]);
@@ -122,14 +122,16 @@ public class SchoolTimetable extends AppCompatActivity {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     Log.d("click", "Click");
+                                    Log.d("click", ClassName[i]+ClassDay[i]);
                                     Intent Edit = new Intent(context,EditSchoolTimetable.class);
-                                    Edit.putExtra(Image_MESSAGE,String.valueOf(imagesPhoto[i]));
+                                    Edit.putExtra(Image_MESSAGE, String.valueOf(ClassName[i]));
                                     Edit.putExtra(ClassName_MESSAGE,String.valueOf(ClassName[i]));
                                     Edit.putExtra(Location_MESSAGE,String.valueOf(ClassName[i]));
                                     Edit.putExtra(Day_MESSAGE,String.valueOf(ClassDay[i]));
                                     Edit.putExtra(StartTime_MESSAGE,String.valueOf(ClassName[i]));
                                     Edit.putExtra(EndTime_MESSAGE,String.valueOf(ClassName[i]));
                                     Edit.putExtra(Position_MESSAGE,String.valueOf(i));
+                                    Log.d("click", ClassName_MESSAGE+"\n"+Location_MESSAGE+"\n"+Day_MESSAGE+"\n"+StartTime_MESSAGE+"\n"+EndTime_MESSAGE+"\n"+Position_MESSAGE);
                                     context.startActivity(Edit);
                                     }
                             });

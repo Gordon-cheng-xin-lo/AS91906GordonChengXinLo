@@ -23,25 +23,36 @@ public class EditSchoolTimetable extends AppCompatActivity {
 
         Intent intent = getIntent();
         String ClassName_message = intent.getStringExtra(SchoolTimetable.ClassName_MESSAGE);
+        EditText ST_Class = (EditText) findViewById(R.id.SchoolTimetable_Edit_Class);
+        ST_Class.setText(ClassName_message);
+        Log.d("Name==================================================================",ClassName_message);
         String Location_message = intent.getStringExtra(SchoolTimetable.Location_MESSAGE);
+        EditText ST_Location = (EditText) findViewById(R.id.SchoolTimetable_Edit_Location);
+        ST_Location.setText(Location_message);
+        Log.d("Location==================================================================",Location_message);
         String Day_message = intent.getStringExtra(SchoolTimetable.Day_MESSAGE);
+        EditText ST_Day = (EditText) findViewById(R.id.schoolTimetable_Edit_Day);
+        ST_Day.setText(Day_message);
+        Log.d("Day==================================================================",Day_message);
         String StartTime_message = intent.getStringExtra(SchoolTimetable.StartTime_MESSAGE);
+        EditText ST_StartTime = (EditText) findViewById(R.id.SchoolTimetable_Edit_Starting_time);
+        ST_StartTime.setText(StartTime_message);
+        Log.d("Start==================================================================",StartTime_message);
         String EndTime_message = intent.getStringExtra(SchoolTimetable.EndTime_MESSAGE);
+        EditText ST_EndTime = (EditText) findViewById(R.id.SchoolTimetable_Edit_Ending_time);
+        ST_EndTime.setText(EndTime_message);
+        Log.d("End==================================================================",EndTime_message);
+
         String Image_message = intent.getStringExtra(SchoolTimetable.Image_MESSAGE);
+
         String Position_message = intent.getStringExtra(SchoolTimetable.Position_MESSAGE);
         Log.d("Day==================================================================",Day_message+"                            "+Position_message);
 
 
-        EditText ST_Class = (EditText) findViewById(R.id.SchoolTimetable_Edit_Class);
-        ST_Class.setText(ClassName_message);
-        EditText ST_Day = (EditText) findViewById(R.id.schoolTimetable_Edit_Day);
-        ST_Day.setText(Day_message);
-        EditText ST_Location = (EditText) findViewById(R.id.SchoolTimetable_Edit_Location);
-        ST_Location.setText(Location_message);
-        EditText ST_StartTime = (EditText) findViewById(R.id.SchoolTimetable_Edit_Starting_time);
-        ST_StartTime.setText(StartTime_message);
-        EditText ST_EndTime = (EditText) findViewById(R.id.SchoolTimetable_Edit_Ending_time);
-        ST_EndTime.setText(EndTime_message);
+
+
+
+
 
     }
 
