@@ -35,6 +35,7 @@ public class SchoolTimetable extends AppCompatActivity {
     int[] image = {R.drawable.img8458,R.drawable.img8460,R.drawable.img8461,R.drawable.img8463,R.drawable.img8464,R.drawable.img8465,R.drawable.img8467,R.drawable.img8468,R.drawable.img8471,R.drawable.img8472,R.drawable.img8474,R.drawable.img8475,R.drawable.img8478,R.drawable.img8483,R.drawable.img8484,R.drawable.img8485,R.drawable.img8493,R.drawable.img8494,R.drawable.img8495,R.drawable.img8458,R.drawable.img8460,R.drawable.img8463,R.drawable.img8464,R.drawable.img8465,R.drawable.img8467,R.drawable.img8468,R.drawable.img8471,R.drawable.img8472,R.drawable.img8474,R.drawable.img8475,R.drawable.img8478,R.drawable.img8483,R.drawable.img8484,R.drawable.img8485,R.drawable.img8493,R.drawable.img8494,R.drawable.img8495,R.drawable.img8495,R.drawable.img8458,R.drawable.img8460,R.drawable.img8461,R.drawable.img8463,R.drawable.img8464,R.drawable.img8465,R.drawable.img8467,R.drawable.img8468,R.drawable.img8471,R.drawable.img8472,R.drawable.img8474,R.drawable.img8475,R.drawable.img8478,R.drawable.img8483,R.drawable.img8484,R.drawable.img8485,R.drawable.img8493,R.drawable.img8494,R.drawable.img8495,R.drawable.img8458,R.drawable.img8460,R.drawable.img8463,R.drawable.img8464,R.drawable.img8465,R.drawable.img8467,R.drawable.img8468,R.drawable.img8471,R.drawable.img8472,R.drawable.img8474,R.drawable.img8475,R.drawable.img8478,R.drawable.img8483,R.drawable.img8484,R.drawable.img8485,R.drawable.img8493,R.drawable.img8494,R.drawable.img8495,R.drawable.img8495};
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -104,10 +105,10 @@ public class SchoolTimetable extends AppCompatActivity {
 
             if ( i <= ClassName.length){
                 if (ClassName[i].length()>=1) {
-                    Log.d("Mission sucess","Mission sucess!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                    Log.d("Mission sucess","Mission success!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
                     ClassNameView.setText(ClassName[i]);
                     DayView.setText(ClassDay[i]);
-                    LocationView.setText("location");
+                    LocationView.setText("location"/*Class[i:"Location"]*/);
                     StartingTimeView.setText("Start at");
                     EndTimeView.setText("End in");
                     imageView.setImageResource(imagesPhoto[i]);
