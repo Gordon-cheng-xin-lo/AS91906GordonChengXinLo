@@ -50,6 +50,7 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
          * setText is the correct function for the call but the call detail is having problem
          * */
 
+//        holder.view.DataView.Date.text = "${data.Data} $position";
         holder.DataView_Date.setText(String.valueOf(data[position]));
         holder.DataView_ClassName.setText(String.valueOf(data[position]));
         holder.DataView_Name.setText(String.valueOf(data[position]));
