@@ -39,10 +39,10 @@ public class Homework extends AppCompatActivity {
     }
 
     private void fillHomeworkInformationList() {
-        HomeworkList HM1 = new HomeworkList(1,"CSC","Programming","20 Credits","3/6/2021");
-        HomeworkList HM2 = new HomeworkList(2,"CAL","Complex Number","Test","4/6/2021");
-        HomeworkList HM3 = new HomeworkList(3,"PHY","MACH","Test","5/5/2021");
-        HomeworkList HM4 = new HomeworkList(4,"PHT","Platelle","Internal","6/8/2021");
+        HomeworkList HM1 = new HomeworkList(1,"3/6/2021","CSC","Programming","15 credit");
+        HomeworkList HM2 = new HomeworkList(2,"4/6/2021","CAl","Complex Number","test");
+        HomeworkList HM3 = new HomeworkList(3,"5/5/2021","PHY","MACH","test");
+        HomeworkList HM4 = new HomeworkList(4,"6/8/2021","PHT","Platelet","Internal");
 
         HomeworkListInformation.addAll(Arrays.asList(HM1,HM2,HM3,HM4));
     }

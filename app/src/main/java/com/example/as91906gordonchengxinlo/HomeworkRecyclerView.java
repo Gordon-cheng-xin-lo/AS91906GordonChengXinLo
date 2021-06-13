@@ -53,10 +53,10 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
          * */
 
 
-        holder.DataView_Date.setText(mHomeworkLists.get(position).getData());
-        holder.DataView_ClassName.setText(mHomeworkLists.get(position).getData());
-        holder.DataView_Name.setText(mHomeworkLists.get(position).getData());
-        holder.DataView_Information.setText(mHomeworkLists.get(position).getData());
+        holder.DataView_Date.setText(mHomeworkLists.get(position).getDate());
+        holder.DataView_ClassName.setText(mHomeworkLists.get(position).getClassName());
+        holder.DataView_Name.setText(mHomeworkLists.get(position).getName());
+        holder.DataView_Information.setText(mHomeworkLists.get(position).getInformation());
         holder.DataView_Date_Label.setText("Date");
         holder.DataView_ClassName_Label.setText("Class");
         holder.DataView_Name_Label.setText("Name");
@@ -67,10 +67,10 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
                 Log.d("click","Click");
                 Intent Edit = new Intent(context,EditHomeWork.class);
 
-                Edit.putExtra(Class_MESSAGE,mHomeworkLists.get(position).getData());
-                Edit.putExtra(Name_MESSAGE,mHomeworkLists.get(position).getData());
-                Edit.putExtra(Date_MESSAGE,mHomeworkLists.get(position).getData());
-                Edit.putExtra(Inform_MESSAGE,mHomeworkLists.get(position).getData());
+                Edit.putExtra(Class_MESSAGE,mHomeworkLists.get(position).getClass());
+                Edit.putExtra(Name_MESSAGE,mHomeworkLists.get(position).getName());
+                Edit.putExtra(Date_MESSAGE,mHomeworkLists.get(position).getDate());
+                Edit.putExtra(Inform_MESSAGE,mHomeworkLists.get(position).getInformation());
                 /*Edit.putExtra()*/
                 context.startActivity(Edit);
             }

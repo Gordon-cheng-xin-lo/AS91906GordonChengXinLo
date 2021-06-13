@@ -4,14 +4,14 @@ import java.net.IDN;
 
 public class HomeworkList {
     public int ID;
-    public String Data;
+    public String Date;
     public String ClassName;
     public String Name;
     public String Information;
 
-    public HomeworkList(int ID,String Data,String ClassName, String Name, String Information){
+    public HomeworkList(int ID,String Date,String ClassName, String Name, String Information){
         this.ID = ID;
-        this.Data = Data;
+        this.Date = Date;
         this.ClassName = ClassName;
         this.Name = Name;
         this.Information = Information;
@@ -25,12 +25,12 @@ public class HomeworkList {
         ID = id;
     }
 
-    public String getData() {
-        return Data;
+    public String getDate() {
+        return Date;
     }
 
-    public void setData(String data) {
-        Data = data;
+    public void setDate(String date) {
+        Date = date;
     }
 
     public String getClassName() {
@@ -60,7 +60,7 @@ public class HomeworkList {
     @Override
     public String toString() {
         return "HomeworkList{" +
-                "Data='" + Data + '\'' +
+                "Date='" + Date + '\'' +
                 ", ClassNmae='" + ClassName + '\'' +
                 ", Name='" + Name + '\'' +
                 ", Information='" + Information + '\'' +

@@ -21,6 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView"
         android:layout_centerHorizontal="true"
+        android:textSize="12sp"
         tools:text="@string/SchoolTimetable_Class" />
 
     <TextView
@@ -29,6 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ClassNameGirdView"
         android:layout_centerHorizontal="true"
+        android:textSize="12sp"
         tools:text="Time" />
 
     <TextView
@@ -37,6 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ClassTimeGirdView"
         android:layout_centerHorizontal="true"
+        android:textSize="12sp"
         tools:text="location" />
 
     <TextView
@@ -45,6 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ClassLocationGirdView"
         android:layout_centerHorizontal="true"
+        android:textSize="12sp"
         tools:text="@string/SchoolTimetable_StartingTime" />
 
     <TextView
@@ -53,6 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ClassStartTimeGirdView"
         android:layout_centerHorizontal="true"
+        android:textSize="12sp"
         tools:text="@string/SchoolTimetable_EndingTime" />
 
     <!--
