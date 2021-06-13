@@ -1,19 +1,29 @@
 package com.example.as91906gordonchengxinlo;
 
+import java.net.IDN;
+
 public class HomeworkList {
+    public int ID;
     public String Data;
     public String ClassName;
     public String Name;
     public String Information;
 
-    public HomeworkList(String Data,String ClassName, String Name, String Information){
+    public HomeworkList(int ID,String Data,String ClassName, String Name, String Information){
+        this.ID = ID;
         this.Data = Data;
         this.ClassName = ClassName;
         this.Name = Name;
         this.Information = Information;
     }
 
+    public int getID() {
+        return ID;
+    }
 
+    public void setID(int id) {
+        ID = id;
+    }
 
     public String getData() {
         return Data;
@@ -54,6 +64,7 @@ public class HomeworkList {
                 ", ClassNmae='" + ClassName + '\'' +
                 ", Name='" + Name + '\'' +
                 ", Information='" + Information + '\'' +
+                ", id='" + ID + '\'' +
                 '}';
     }
 }

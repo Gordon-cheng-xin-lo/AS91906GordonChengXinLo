@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -16,40 +18,33 @@ public class Homework extends AppCompatActivity {
     RecyclerView HomeworkRecyclerView;
     HomeworkRecyclerView adapter;
 
-    HomeworkList[] Homework_Information ={
-            new HomeworkList("3/6/2021","CSC","Programming","20 Credits"),
-            new HomeworkList("4/6/2021","CAL","Complex Number","Test"),
-            new HomeworkList("5/5/2021","PHY","MACH","Test"),
-            new HomeworkList("6/8/2021","PHT","Platelle","Internal"),
+    List<HomeworkList> HomeworkListInformation = new ArrayList<HomeworkList>();
 
-    };
-
-/*
-    String HM = Arrays.toString(new HomeworkList[]{
-
-            new HomeworkList("3/6/2021","CSC","Programming","20 Credits"),
-            new HomeworkList("4/6/2021","CAL","Complex Number","Test"),
-            new HomeworkList("5/5/2021","PHY","MACH","Test"),
-            new HomeworkList("6/8/2021","PHT","Platelle","Internal"),
-    });
-*/
-
-
+    @SuppressLint("LongLogTag")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homework);
+        fillHomeworkInformationList();
+        Log.d("Lsit Response>>>>>>>>>>>>>>>>>>>>>>>>>>>", HomeworkListInformation.toString());
         getSupportActionBar();
 
 
         HomeworkRecyclerView= findViewById(R.id.Homewok_Recycleview);
         HomeworkRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-
-
-        adapter = new HomeworkRecyclerView(this,Homework_Information);
+        adapter = new HomeworkRecyclerView(this, HomeworkListInformation);
         HomeworkRecyclerView.setAdapter(adapter);
 
+    }
+
+    private void fillHomeworkInformationList() {
+        HomeworkList HM1 = new HomeworkList(1,"CSC","Programming","20 Credits","3/6/2021");
+        HomeworkList HM2 = new HomeworkList(2,"CAL","Complex Number","Test","4/6/2021");
+        HomeworkList HM3 = new HomeworkList(3,"PHY","MACH","Test","5/5/2021");
+        HomeworkList HM4 = new HomeworkList(4,"PHT","Platelle","Internal","6/8/2021");
+
+        HomeworkListInformation.addAll(Arrays.asList(HM1,HM2,HM3,HM4));
     }
 
     public void Homepage (View aView) {

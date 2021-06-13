@@ -21,19 +21,20 @@ import java.util.List;
 
 public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerView.ViewHolder>
 {
-    HomeworkList[] data;
+
     Context context;
+    List<HomeworkList> mHomeworkLists;
 
     public static final String Class_MESSAGE = "Text Entry App";
     public static final String Name_MESSAGE = "Text Entry App";
     public static final String Date_MESSAGE = "Text Entry App";
     public static final String Inform_MESSAGE = "Text Entry App";
 
-
-    public HomeworkRecyclerView(Context context, HomeworkList[] data) {
-        this.data = data;
+    public HomeworkRecyclerView(Context context,List<HomeworkList> homeworkLists) {
         this.context = context;
+        this.mHomeworkLists = homeworkLists;
     }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -42,19 +43,20 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
         return new ViewHolder(view);
     }
 
+    @SuppressLint({"LongLogTag", "SetTextI18n"})
     @Override
-    public void onBindViewHolder(@NonNull HomeworkRecyclerView.ViewHolder holder, int position)
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position)
     {
         /*Got problem showing the content on the list solve it later on at school day
          *        *
          * setText is the correct function for the call but the call detail is having problem
          * */
 
-//        holder.view.DataView.Date.text = "${data.Data} $position";
-        holder.DataView_Date.setText(String.valueOf(data[position]));
-        holder.DataView_ClassName.setText(String.valueOf(data[position]));
-        holder.DataView_Name.setText(String.valueOf(data[position]));
-        holder.DataView_Information.setText(String.valueOf(data[position]));
+
+        holder.DataView_Date.setText(mHomeworkLists.get(position).getData());
+        holder.DataView_ClassName.setText(mHomeworkLists.get(position).getData());
+        holder.DataView_Name.setText(mHomeworkLists.get(position).getData());
+        holder.DataView_Information.setText(mHomeworkLists.get(position).getData());
         holder.DataView_Date_Label.setText("Date");
         holder.DataView_ClassName_Label.setText("Class");
         holder.DataView_Name_Label.setText("Name");
@@ -65,10 +67,10 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
                 Log.d("click","Click");
                 Intent Edit = new Intent(context,EditHomeWork.class);
 
-                Edit.putExtra(Class_MESSAGE,String.valueOf(data[position]));
-                Edit.putExtra(Name_MESSAGE,String.valueOf(data[position]));
-                Edit.putExtra(Date_MESSAGE,String.valueOf(data[position]));
-                Edit.putExtra(Inform_MESSAGE,String.valueOf(data[position]));
+                Edit.putExtra(Class_MESSAGE,mHomeworkLists.get(position).getData());
+                Edit.putExtra(Name_MESSAGE,mHomeworkLists.get(position).getData());
+                Edit.putExtra(Date_MESSAGE,mHomeworkLists.get(position).getData());
+                Edit.putExtra(Inform_MESSAGE,mHomeworkLists.get(position).getData());
                 /*Edit.putExtra()*/
                 context.startActivity(Edit);
             }
@@ -79,7 +81,8 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
             public void onClick(View v) {
                 Log.d("Delete Button click>>>>>>>>>>>>>>>>>>>>>","Delete ButtonClick");
 
-                String DeleteClass = String.valueOf(data[position]);
+                mHomeworkLists.toString();
+                String DeleteClass = String.valueOf(mHomeworkLists.get(position));
 
 
                 AlertDialog.Builder Warning = new AlertDialog.Builder(context);
@@ -87,7 +90,7 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
                 Warning.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Log.d("Position of the list===================","The position of the string  value is "+position);
+                        Log.d("Position of the list===================","The position of the string  value is " + position);
 
 
                     }
@@ -100,7 +103,7 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
 
     @Override
     public int getItemCount() {
-        return data.length ;
+        return mHomeworkLists.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder
