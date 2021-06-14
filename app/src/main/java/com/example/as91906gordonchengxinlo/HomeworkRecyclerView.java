@@ -82,7 +82,7 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
                 Log.d("Delete Button click>>>>>>>>>>>>>>>>>>>>>","Delete ButtonClick");
 
                 mHomeworkLists.toString();
-                String DeleteClass = String.valueOf(mHomeworkLists.get(position));
+                String DeleteClass = String.valueOf(mHomeworkLists.get(position).getName());
 
 
                 AlertDialog.Builder Warning = new AlertDialog.Builder(context);

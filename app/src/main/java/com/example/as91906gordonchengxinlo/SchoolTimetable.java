@@ -163,7 +163,7 @@ public class SchoolTimetable extends AppCompatActivity {
                                     Edit.putExtra(StartTime_MESSAGE, SchoolTimetableListsInformation.get(i).getStartTime());
                                     Edit.putExtra(EndTime_MESSAGE, SchoolTimetableListsInformation.get(i).getEndTime());
                                     Edit.putExtra(Position_MESSAGE, String.valueOf(i));
-                                    Log.d("click", ClassName_MESSAGE + "\n" + Location_MESSAGE + "\n" + Day_MESSAGE + "\n" + StartTime_MESSAGE + "\n" + EndTime_MESSAGE + "\n" + Position_MESSAGE);
+                                    Log.d("click", SchoolTimetableListsInformation.get(i).getSTClassName() + "\n" + SchoolTimetableListsInformation.get(i).getLocation() + "\n" + SchoolTimetableListsInformation.get(i).getDay() + "\n" + SchoolTimetableListsInformation.get(i).getStartTime() + "\n" + SchoolTimetableListsInformation.get(i).getEndTime() + "\n" + i);
                                     context.startActivity(Edit);
                                 }
                             });
