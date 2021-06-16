@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class EditSchoolTimetable extends AppCompatActivity {
 
     @SuppressLint("LongLogTag")
@@ -22,7 +24,7 @@ public class EditSchoolTimetable extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        String ClassName_message = intent.getStringExtra("ClassName_MESSAGE");
+        String ClassName_message = intent.getStringExtra("Class_MESSAGE");
         EditText ST_Class = (EditText) findViewById(R.id.SchoolTimetable_Edit_Class);
         ST_Class.setText(ClassName_message);
         String Location_message = intent.getStringExtra("Location_MESSAGE");
@@ -31,7 +33,9 @@ public class EditSchoolTimetable extends AppCompatActivity {
         String Day_message = intent.getStringExtra("Day_MESSAGE");
         EditText ST_Day = (EditText) findViewById(R.id.schoolTimetable_Edit_Day);
         ST_Day.setText(Day_message);
+        DecimalFormat TimeForm = new DecimalFormat("##:##");
         String StartTime_message = intent.getStringExtra("StartTime_MESSAGE");
+
         EditText ST_StartTime = (EditText) findViewById(R.id.SchoolTimetable_Edit_Starting_time);
         ST_StartTime.setText(StartTime_message);
         String EndTime_message = intent.getStringExtra("EndTime_MESSAGE");

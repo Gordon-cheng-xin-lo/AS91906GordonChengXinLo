@@ -2,25 +2,29 @@ package com.example.as91906gordonchengxinlo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
 public class EditHomeWork extends AppCompatActivity {
 
+    @SuppressLint("LongLogTag")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_home_work);
         Intent intent = getIntent();
-        String Name_message = intent.getStringExtra(HomeworkRecyclerView.Name_MESSAGE);
-        String Class_message = intent.getStringExtra(HomeworkRecyclerView.Class_MESSAGE);
-        String Date_message = intent.getStringExtra(HomeworkRecyclerView.Date_MESSAGE);
-        String Inform_message = intent.getStringExtra(HomeworkRecyclerView.Inform_MESSAGE);
+        String Name_message = intent.getStringExtra("Name_MESSAGE");
+        String Class_message = intent.getStringExtra("Class_MESSAGE");
+        String Date_message = intent.getStringExtra("Date_MESSAGE");
+        String Inform_message = intent.getStringExtra("Inform_MESSAGE");
+        Log.d("Check Data >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>",Name_message+"\n"+Class_message+"\n"+Date_message+"\n"+Inform_message);
         EditText HM_Date = (EditText) findViewById(R.id.HM_Edit_Date);
         HM_Date.setText(Date_message);
         EditText HM_Class = (EditText) findViewById(R.id.HM_Edit_Class);

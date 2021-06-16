@@ -67,10 +67,10 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
                 Log.d("click","Click");
                 Intent Edit = new Intent(context,EditHomeWork.class);
 
-                Edit.putExtra(Class_MESSAGE,mHomeworkLists.get(position).getClass());
-                Edit.putExtra(Name_MESSAGE,mHomeworkLists.get(position).getName());
-                Edit.putExtra(Date_MESSAGE,mHomeworkLists.get(position).getDate());
-                Edit.putExtra(Inform_MESSAGE,mHomeworkLists.get(position).getInformation());
+                Edit.putExtra("Class_MESSAGE",mHomeworkLists.get(position).getClassName());
+                Edit.putExtra("Name_MESSAGE",mHomeworkLists.get(position).getName());
+                Edit.putExtra("Date_MESSAGE",mHomeworkLists.get(position).getDate());
+                Edit.putExtra("Inform_MESSAGE",mHomeworkLists.get(position).getInformation());
                 /*Edit.putExtra()*/
                 context.startActivity(Edit);
             }

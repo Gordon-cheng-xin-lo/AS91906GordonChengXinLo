@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -42,7 +43,7 @@ public class SchoolTimetable extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_school_timetable);
         fillSchoolTimetableListsInformation();
-
+        DecimalFormat TimeFormST = new DecimalFormat("##:##");
         gridView = findViewById(R.id.SchoolTimeTbale_GridView);
 
         CustomerAdapter customerAdapter = new CustomerAdapter(SchoolTimetableListsInformation, image, this);
@@ -50,26 +51,26 @@ public class SchoolTimetable extends AppCompatActivity {
     }
 
     private void fillSchoolTimetableListsInformation() {
-        SchoolTimetableList ST1 = new SchoolTimetableList(1,"Wednesday","P1","PHT","","");
-        SchoolTimetableList ST2 = new SchoolTimetableList(2,"Monday","B4","CSC","","");
-        SchoolTimetableList ST3 = new SchoolTimetableList(3,"Monday","N5","CAL","","");
-        SchoolTimetableList ST4 = new SchoolTimetableList(4,"Tuesday","M4","ACC","","");
-        SchoolTimetableList ST5 = new SchoolTimetableList(5,"Friday","H4","ART","","");
-        SchoolTimetableList ST6 = new SchoolTimetableList(6,"Wednesday","F7","LST","","");
-        SchoolTimetableList ST7 = new SchoolTimetableList(7,"Thursday","V6","BAA","","");
-        SchoolTimetableList ST8 = new SchoolTimetableList(8,"Monday","P4","PHY","","");
-        SchoolTimetableList ST9 = new SchoolTimetableList(9,"Friday","A3","DTG","","");
-        SchoolTimetableList ST10 = new SchoolTimetableList(10,"Wednesday","E6","PHT","","");
-        SchoolTimetableList ST11 = new SchoolTimetableList(11,"Friday","B3","FT","","");
-        SchoolTimetableList ST12 = new SchoolTimetableList(12,"Monday","M3","ACC","","");
-        SchoolTimetableList ST13 = new SchoolTimetableList(13,"Tuesday","L1","BYO","","");
-        SchoolTimetableList ST14 = new SchoolTimetableList(14,"Wednesday","Y4","BIO","","");
-        SchoolTimetableList ST15 = new SchoolTimetableList(15,"Thursday","S5","CHE","","");
-        SchoolTimetableList ST16 = new SchoolTimetableList(16,"Monday","B7","STA","","");
-        SchoolTimetableList ST17 = new SchoolTimetableList(17,"Friday","N3","LSS","","");
-        SchoolTimetableList ST18 = new SchoolTimetableList(18,"Tuesday","V5","","","");
-        SchoolTimetableList ST19 = new SchoolTimetableList(19,"","","N2","","");
-        SchoolTimetableList ST20 = new SchoolTimetableList(20,"Monday","J7","","","");
+        SchoolTimetableList ST1 = new SchoolTimetableList(1,"Wednesday","P1","PHT","1111","1111");
+        SchoolTimetableList ST2 = new SchoolTimetableList(2,"Monday","B4","CSC","1111","1111");
+        SchoolTimetableList ST3 = new SchoolTimetableList(3,"Monday","N5","CAL","1111","1111");
+        SchoolTimetableList ST4 = new SchoolTimetableList(4,"Tuesday","M4","ACC","1111","1111");
+        SchoolTimetableList ST5 = new SchoolTimetableList(5,"Friday","H4","ART","1111","1111");
+        SchoolTimetableList ST6 = new SchoolTimetableList(6,"Wednesday","F7","LST","1111","1111");
+        SchoolTimetableList ST7 = new SchoolTimetableList(7,"Thursday","V6","BAA","1111","1111");
+        SchoolTimetableList ST8 = new SchoolTimetableList(8,"Monday","P4","PHY","1111","1111");
+        SchoolTimetableList ST9 = new SchoolTimetableList(9,"Friday","A3","DTG","1111","1111");
+        SchoolTimetableList ST10 = new SchoolTimetableList(10,"Wednesday","E6","PHT","1111","1111");
+        SchoolTimetableList ST11 = new SchoolTimetableList(11,"Friday","B3","FT","1111","1111");
+        SchoolTimetableList ST12 = new SchoolTimetableList(12,"Monday","M3","ACC","1111","1111");
+        SchoolTimetableList ST13 = new SchoolTimetableList(13,"Tuesday","L1","BYO","1111","1111");
+        SchoolTimetableList ST14 = new SchoolTimetableList(14,"Wednesday","Y4","BIO","1111","1111");
+        SchoolTimetableList ST15 = new SchoolTimetableList(15,"Thursday","S5","CHE","1111","1111");
+        SchoolTimetableList ST16 = new SchoolTimetableList(16,"Monday","B7","STA","1111","1111");
+        SchoolTimetableList ST17 = new SchoolTimetableList(17,"Friday","N3","LSS","1111","");
+        SchoolTimetableList ST18 = new SchoolTimetableList(18,"Tuesday","V5","","1111","");
+        SchoolTimetableList ST19 = new SchoolTimetableList(19,"","","N2","1111","1111");
+        SchoolTimetableList ST20 = new SchoolTimetableList(20,"Monday","J7","","1111","1111");
 
         SchoolTimetableListsInformation.addAll(Arrays.asList(ST1,ST2,ST3,ST4,ST5,ST6,ST7,ST8,ST9,ST10,ST11,ST12,ST13,ST14,ST15,ST16,ST17,ST18,ST19,ST20));
     }

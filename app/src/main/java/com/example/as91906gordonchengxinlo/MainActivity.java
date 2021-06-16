@@ -14,12 +14,17 @@ public class MainActivity extends AppCompatActivity {
     Button RevisionButton;
     Button KamarButton;
     Button AccountButton;
+    int Set = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if (Set==0){
+
+            Set=1;
+        }
 
         TimeTableButton = findViewById(R.id.TimeTable_button);
         ContentShareButton = findViewById(R.id.ContentShare_button);
