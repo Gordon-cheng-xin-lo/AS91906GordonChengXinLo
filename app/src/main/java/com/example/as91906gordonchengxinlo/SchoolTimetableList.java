@@ -1,6 +1,9 @@
 package com.example.as91906gordonchengxinlo;
 
-public class SchoolTimetableList {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class SchoolTimetableList implements Parcelable {
     public int ID;
     public String Day;
     public String ClassName;
@@ -16,6 +19,27 @@ public class SchoolTimetableList {
         this.StartTime = StartTime;
         this.EndTime = EndTime;
     }
+
+    protected SchoolTimetableList(Parcel in) {
+        ID = in.readInt();
+        Day = in.readString();
+        ClassName = in.readString();
+        Location = in.readString();
+        StartTime = in.readString();
+        EndTime = in.readString();
+    }
+
+    public static final Creator<SchoolTimetableList> CREATOR = new Creator<SchoolTimetableList>() {
+        @Override
+        public SchoolTimetableList createFromParcel(Parcel in) {
+            return new SchoolTimetableList(in);
+        }
+
+        @Override
+        public SchoolTimetableList[] newArray(int size) {
+            return new SchoolTimetableList[size];
+        }
+    };
 
     public int getSTID() {
         return ID;
@@ -75,5 +99,20 @@ public class SchoolTimetableList {
                 ", EndTime='" + EndTime + '\'' +
                 ", id='" + ID + '\'' +
                 '}';
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(ID);
+        dest.writeString(Day);
+        dest.writeString(ClassName);
+        dest.writeString(Location);
+        dest.writeString(StartTime);
+        dest.writeString(EndTime);
     }
 }

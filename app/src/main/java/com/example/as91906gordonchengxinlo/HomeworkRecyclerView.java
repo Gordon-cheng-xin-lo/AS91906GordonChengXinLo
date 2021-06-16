@@ -86,7 +86,7 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
 
 
                 AlertDialog.Builder Warning = new AlertDialog.Builder(context);
-                Warning.setMessage("Is that you want to Delete"+DeleteClass+" Homework Form the Phone");
+                Warning.setMessage("Is that you want to Delete "+DeleteClass+" Homework Form the Phone");
                 Warning.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

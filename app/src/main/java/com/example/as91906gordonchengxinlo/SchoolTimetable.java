@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,20 +26,16 @@ public class SchoolTimetable extends AppCompatActivity {
 
     GridView gridView;
 
-    public static final String ClassName_MESSAGE = "Text Entry App";
-    public static final String Location_MESSAGE = "Text Entry App";
-    public static final String Day_MESSAGE = "Text Entry App";
-    public static final String StartTime_MESSAGE = "Text Entry App";
-    public static final String EndTime_MESSAGE = "Text Entry App";
-    public static final String Image_MESSAGE = "Text Entry App";
-    public static final String Position_MESSAGE = "Text Entry App";
-
-    String[] ClassName = {"Photo1", "aaa", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "AAA", "", "CCC", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo", "Photo"};
-    String[] ClassDay = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
+    public static final String Position_MESSAGE = "";
+    public static final String ClassName_MESSAGE = "";
+    public static final String Location_MESSAGE = "";
+    public static final String Day_MESSAGE = "";
+    public static final String StartTime_MESSAGE = "";
+    public static final String EndTime_MESSAGE = "";
 
     int[] image = {R.drawable.img8458, R.drawable.img8460, R.drawable.img8461, R.drawable.img8463, R.drawable.img8464, R.drawable.img8465, R.drawable.img8467, R.drawable.img8468, R.drawable.img8471, R.drawable.img8472, R.drawable.img8474, R.drawable.img8475, R.drawable.img8478, R.drawable.img8483, R.drawable.img8484, R.drawable.img8485, R.drawable.img8493, R.drawable.img8494, R.drawable.img8495, R.drawable.img8458, R.drawable.img8460, R.drawable.img8463, R.drawable.img8464, R.drawable.img8465, R.drawable.img8467, R.drawable.img8468, R.drawable.img8471, R.drawable.img8472, R.drawable.img8474, R.drawable.img8475, R.drawable.img8478, R.drawable.img8483, R.drawable.img8484, R.drawable.img8485, R.drawable.img8493, R.drawable.img8494, R.drawable.img8495, R.drawable.img8495, R.drawable.img8458, R.drawable.img8460, R.drawable.img8461, R.drawable.img8463, R.drawable.img8464, R.drawable.img8465, R.drawable.img8467, R.drawable.img8468, R.drawable.img8471, R.drawable.img8472, R.drawable.img8474, R.drawable.img8475, R.drawable.img8478, R.drawable.img8483, R.drawable.img8484, R.drawable.img8485, R.drawable.img8493, R.drawable.img8494, R.drawable.img8495, R.drawable.img8458, R.drawable.img8460, R.drawable.img8463, R.drawable.img8464, R.drawable.img8465, R.drawable.img8467, R.drawable.img8468, R.drawable.img8471, R.drawable.img8472, R.drawable.img8474, R.drawable.img8475, R.drawable.img8478, R.drawable.img8483, R.drawable.img8484, R.drawable.img8485, R.drawable.img8493, R.drawable.img8494, R.drawable.img8495, R.drawable.img8495};
 
-    List<SchoolTimetableList> SchoolTimetableListsInformation = new ArrayList<SchoolTimetableList>();
+    public List<SchoolTimetableList> SchoolTimetableListsInformation = new ArrayList<SchoolTimetableList>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +45,7 @@ public class SchoolTimetable extends AppCompatActivity {
 
         gridView = findViewById(R.id.SchoolTimeTbale_GridView);
 
-        CustomerAdapter customerAdapter = new CustomerAdapter(ClassName, ClassDay, image, this);
+        CustomerAdapter customerAdapter = new CustomerAdapter(SchoolTimetableListsInformation, image, this);
         gridView.setAdapter(customerAdapter);
     }
 
@@ -83,19 +80,17 @@ public class SchoolTimetable extends AppCompatActivity {
     }
 
     public class CustomerAdapter extends BaseAdapter {
-        private String[] ClassName;
-        private String[] ClassDay;
         private int[] imagesPhoto;
         private Context context;
+        private List schoolTimetableListsInformation;
         private LayoutInflater layoutInflater;
 
-        public CustomerAdapter(String[] ClassName, String[] Day, int[] imagesPhoto, Context context) {
-            this.ClassName = ClassName;
-            this.ClassDay = Day;
-            this.imagesPhoto = imagesPhoto;
+
+        public CustomerAdapter(List<SchoolTimetableList> schoolTimetableListsInformation, int[] image, Context context) {
+            this.schoolTimetableListsInformation = schoolTimetableListsInformation;
+            this.imagesPhoto = image;
             this.context = context;
             this.layoutInflater = (LayoutInflater) context.getSystemService(LAYOUT_INFLATER_SERVICE);
-
         }
 
         @Override
@@ -141,7 +136,7 @@ public class SchoolTimetable extends AppCompatActivity {
                     view.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Log.d("View Clicked========", "view Name =======>" + ClassName[i]);
+                            Log.d("View Clicked========", "view Name =======>" + SchoolTimetableListsInformation.get(i).getSTClassName());
                             AlertDialog.Builder Detail = new AlertDialog.Builder(SchoolTimetable.this);
                             Detail.setMessage("Class ==>" + SchoolTimetableListsInformation.get(i).getSTClassName()+
                                     "\nDetail\nDay ==>" + SchoolTimetableListsInformation.get(i).getDay()+
@@ -154,16 +149,20 @@ public class SchoolTimetable extends AppCompatActivity {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     Log.d("click", "Click");
-                                    Log.d("click", ClassName[i] + ClassDay[i]);
+                                    Log.d("click", SchoolTimetableListsInformation.get(i).getSTClassName() + SchoolTimetableListsInformation.get(i).getDay());
                                     Intent Edit = new Intent(context, EditSchoolTimetable.class);
-                                    Edit.putExtra(Image_MESSAGE, String.valueOf(ClassName[i]));
-                                    Edit.putExtra(ClassName_MESSAGE, SchoolTimetableListsInformation.get(i).getSTClassName());
-                                    Edit.putExtra(Location_MESSAGE, SchoolTimetableListsInformation.get(i).getLocation());
-                                    Edit.putExtra(Day_MESSAGE, SchoolTimetableListsInformation.get(i).getDay());
-                                    Edit.putExtra(StartTime_MESSAGE, SchoolTimetableListsInformation.get(i).getStartTime());
-                                    Edit.putExtra(EndTime_MESSAGE, SchoolTimetableListsInformation.get(i).getEndTime());
-                                    Edit.putExtra(Position_MESSAGE, String.valueOf(i));
-                                    Log.d("click", SchoolTimetableListsInformation.get(i).getSTClassName() + "\n" + SchoolTimetableListsInformation.get(i).getLocation() + "\n" + SchoolTimetableListsInformation.get(i).getDay() + "\n" + SchoolTimetableListsInformation.get(i).getStartTime() + "\n" + SchoolTimetableListsInformation.get(i).getEndTime() + "\n" + i);
+                                    Edit.putExtra("ClassName_MESSAGE", SchoolTimetableListsInformation.get(i).getSTClassName());
+                                    Edit.putExtra("Location_MESSAGE", SchoolTimetableListsInformation.get(i).getLocation());
+                                    Edit.putExtra("Day_MESSAGE", SchoolTimetableListsInformation.get(i).getDay());
+                                    Edit.putExtra("StartTime_MESSAGE", SchoolTimetableListsInformation.get(i).getStartTime());
+                                    Edit.putExtra("EndTime_MESSAGE", SchoolTimetableListsInformation.get(i).getEndTime());
+                                    Edit.putExtra("Position_MESSAGE", i);
+                                    Log.d("click>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>", SchoolTimetableListsInformation.get(i).getSTClassName() + "\n" + SchoolTimetableListsInformation.get(i).getLocation() + "\n" + SchoolTimetableListsInformation.get(i).getDay() + "\n" + SchoolTimetableListsInformation.get(i).getStartTime() + "\n" + SchoolTimetableListsInformation.get(i).getEndTime() + "\n" + i);
+                                    Log.d("click>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>", Position_MESSAGE);
+                                    Log.d("click>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>", Day_MESSAGE);
+                                    Log.d("click>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>", Location_MESSAGE);
+                                    Log.d("click>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>", ClassName_MESSAGE);
+                                    Log.d("click>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>", StartTime_MESSAGE);
                                     context.startActivity(Edit);
                                 }
                             });
