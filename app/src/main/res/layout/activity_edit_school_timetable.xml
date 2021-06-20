@@ -160,7 +160,7 @@
         android:contentDescription="@string/HM_Date"
         android:hint="@string/SchoolTimeTable_Date"
         android:inputType="date"
-        android:maxLength="8"
+        android:maxLength="9"
         android:textColor="@color/white"
         android:textColorHint="#FFFFFF"
         android:textSize="24sp"

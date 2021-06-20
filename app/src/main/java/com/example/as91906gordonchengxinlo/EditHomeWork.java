@@ -24,7 +24,7 @@ public class EditHomeWork extends AppCompatActivity {
         String Class_message = intent.getStringExtra("Class_MESSAGE");
         String Date_message = intent.getStringExtra("Date_MESSAGE");
         String Inform_message = intent.getStringExtra("Inform_MESSAGE");
-        Log.d("Check Data >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>",Name_message+"\n"+Class_message+"\n"+Date_message+"\n"+Inform_message);
+//        Log.d("Check Data >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>",Name_message+"\n"+Class_message+"\n"+Date_message+"\n"+Inform_message);
         EditText HM_Date = (EditText) findViewById(R.id.HM_Edit_Date);
         HM_Date.setText(Date_message);
         EditText HM_Class = (EditText) findViewById(R.id.HM_Edit_Class);

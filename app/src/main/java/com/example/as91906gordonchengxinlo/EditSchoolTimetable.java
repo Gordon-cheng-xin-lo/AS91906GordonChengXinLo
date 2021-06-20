@@ -33,7 +33,7 @@ public class EditSchoolTimetable extends AppCompatActivity {
         String Day_message = intent.getStringExtra("Day_MESSAGE");
         EditText ST_Day = (EditText) findViewById(R.id.schoolTimetable_Edit_Day);
         ST_Day.setText(Day_message);
-        DecimalFormat TimeForm = new DecimalFormat("##:##");
+//        DecimalFormat TimeForm = new DecimalFormat("##:##");
         String StartTime_message = intent.getStringExtra("StartTime_MESSAGE");
 
         EditText ST_StartTime = (EditText) findViewById(R.id.SchoolTimetable_Edit_Starting_time);
@@ -43,7 +43,7 @@ public class EditSchoolTimetable extends AppCompatActivity {
         ST_EndTime.setText(EndTime_message);
 
 
-        String Position_message = intent.getStringExtra(SchoolTimetable.Position_MESSAGE);
+//        String Position_message = intent.getStringExtra(SchoolTimetable.Position_MESSAGE);
         Log.d("Day==================================================================",ClassName_message+Location_message+Day_message+StartTime_message+EndTime_message);
 
 
@@ -54,7 +54,6 @@ public class EditSchoolTimetable extends AppCompatActivity {
         /*
          * up data the setting by the get value and update to the list by showing the text view
          * */
-
         /*Edit.putExtra()*/
         TextView EditedClass = (TextView)findViewById(R.id.SchoolTimetable_Edit_Class);
         TextView EditedDay = (TextView)findViewById(R.id.schoolTimetable_Edit_Day);

@@ -5,24 +5,28 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="1dp"
+    android:background="#68131111"
     android:padding="2dp">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="70dp"
-        android:layout_height="100dp"
-        android:scaleType="fitXY"
-        android:layout_centerHorizontal="true"
-        android:src="@mipmap/ic_launcher" />
+    <!--    <ImageView-->
+    <!--        android:id="@+id/imageView"-->
+    <!--        android:layout_width="70dp"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:scaleType="fitXY"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:src="@mipmap/ic_launcher" />-->
 
     <TextView
         android:id="@+id/ClassNameGirdView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/imageView"
         android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
         android:textSize="12sp"
         tools:text="@string/SchoolTimetable_Class" />
+
+    <!--    android:layout_below="@id/imageView"-->
+
 
     <TextView
         android:id="@+id/ClassTimeGirdView"
@@ -30,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ClassNameGirdView"
         android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
         android:textSize="12sp"
         tools:text="Time" />
 
@@ -39,6 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ClassTimeGirdView"
         android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
         android:textSize="12sp"
         tools:text="location" />
 
@@ -48,6 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ClassLocationGirdView"
         android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
         android:textSize="12sp"
         tools:text="@string/SchoolTimetable_StartingTime" />
 
@@ -57,6 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ClassStartTimeGirdView"
         android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
         android:textSize="12sp"
         tools:text="@string/SchoolTimetable_EndingTime" />
 
