@@ -27,9 +27,6 @@ public class SchoolTimetable extends AppCompatActivity {
 
     GridView gridView;
 
-
-
-
     int[] image = {R.drawable.img8458, R.drawable.img8460, R.drawable.img8461, R.drawable.img8463, R.drawable.img8464, R.drawable.img8465, R.drawable.img8467, R.drawable.img8468, R.drawable.img8471, R.drawable.img8472, R.drawable.img8474, R.drawable.img8475, R.drawable.img8478, R.drawable.img8483, R.drawable.img8484, R.drawable.img8485, R.drawable.img8493, R.drawable.img8494, R.drawable.img8495, R.drawable.img8458, R.drawable.img8460, R.drawable.img8463, R.drawable.img8464, R.drawable.img8465, R.drawable.img8467, R.drawable.img8468, R.drawable.img8471, R.drawable.img8472, R.drawable.img8474, R.drawable.img8475, R.drawable.img8478, R.drawable.img8483, R.drawable.img8484, R.drawable.img8485, R.drawable.img8493, R.drawable.img8494, R.drawable.img8495, R.drawable.img8495, R.drawable.img8458, R.drawable.img8460, R.drawable.img8461, R.drawable.img8463, R.drawable.img8464, R.drawable.img8465, R.drawable.img8467, R.drawable.img8468, R.drawable.img8471, R.drawable.img8472, R.drawable.img8474, R.drawable.img8475, R.drawable.img8478, R.drawable.img8483, R.drawable.img8484, R.drawable.img8485, R.drawable.img8493, R.drawable.img8494, R.drawable.img8495, R.drawable.img8458, R.drawable.img8460, R.drawable.img8463, R.drawable.img8464, R.drawable.img8465, R.drawable.img8467, R.drawable.img8468, R.drawable.img8471, R.drawable.img8472, R.drawable.img8474, R.drawable.img8475, R.drawable.img8478, R.drawable.img8483, R.drawable.img8484, R.drawable.img8485, R.drawable.img8493, R.drawable.img8494, R.drawable.img8495, R.drawable.img8495};
 
     public List<SchoolTimetableList> SchoolTimetableListsInformation = new ArrayList<SchoolTimetableList>();
@@ -67,8 +64,29 @@ public class SchoolTimetable extends AppCompatActivity {
         SchoolTimetableList ST18 = new SchoolTimetableList(18,"Tuesday","V5","","1111","");
         SchoolTimetableList ST19 = new SchoolTimetableList(19,"","","N2","1111","1111");
         SchoolTimetableList ST20 = new SchoolTimetableList(20,"Monday","J7","","1111","1111");
+        SchoolTimetableList ST21 = new SchoolTimetableList(1,"Wednesday","P1","PHT","1111","1111");
+        SchoolTimetableList ST22 = new SchoolTimetableList(2,"Monday","B4","CSC","1111","1111");
+        SchoolTimetableList ST23 = new SchoolTimetableList(3,"Monday","N5","CAL","1111","1111");
+        SchoolTimetableList ST24 = new SchoolTimetableList(4,"Tuesday","M4","ACC","1111","1111");
+        SchoolTimetableList ST25 = new SchoolTimetableList(5,"Friday","H4","ART","1111","1111");
+        SchoolTimetableList ST26 = new SchoolTimetableList(6,"Wednesday","F7","LST","1111","1111");
+        SchoolTimetableList ST27 = new SchoolTimetableList(7,"Thursday","V6","BAA","1111","1111");
+        SchoolTimetableList ST28 = new SchoolTimetableList(8,"Monday","P4","PHY","1111","1111");
+        SchoolTimetableList ST29 = new SchoolTimetableList(9,"Friday","A3","DTG","1111","1111");
+        SchoolTimetableList ST30 = new SchoolTimetableList(10,"Wednesday","E6","PHT","1111","1111");
+        SchoolTimetableList ST31 = new SchoolTimetableList(11,"Friday","B3","FT","1111","1111");
+        SchoolTimetableList ST32 = new SchoolTimetableList(12,"Monday","M3","ACC","1111","1111");
+        SchoolTimetableList ST33 = new SchoolTimetableList(13,"Tuesday","L1","BYO","1111","1111");
+        SchoolTimetableList ST34 = new SchoolTimetableList(14,"Wednesday","Y4","BIO","1111","1111");
+        SchoolTimetableList ST35 = new SchoolTimetableList(15,"Thursday","S5","CHE","1111","1111");
+        SchoolTimetableList ST36 = new SchoolTimetableList(16,"Monday","B7","STA","1111","1111");
+        SchoolTimetableList ST37 = new SchoolTimetableList(17,"Friday","N3","LSS","1111","");
+        SchoolTimetableList ST38 = new SchoolTimetableList(18,"Tuesday","V5","","1111","");
+        SchoolTimetableList ST39 = new SchoolTimetableList(19,"","","N2","1111","1111");
+        SchoolTimetableList ST40 = new SchoolTimetableList(20,"Monday","J7","","1111","1111");
 
-        SchoolTimetableListsInformation.addAll(Arrays.asList(ST1,ST2,ST3,ST4,ST5,ST6,ST7,ST8,ST9,ST10,ST11,ST12,ST13,ST14,ST15,ST16,ST17,ST18,ST19,ST20));
+
+        SchoolTimetableListsInformation.addAll(Arrays.asList(ST1,ST2,ST3,ST4,ST5,ST6,ST7,ST8,ST9,ST10,ST11,ST12,ST13,ST14,ST15,ST16,ST17,ST18,ST19,ST20,ST21,ST22,ST23,ST24,ST25,ST26,ST27,ST28,ST29,ST30,ST31,ST32,ST33,ST34,ST35,ST36,ST37,ST38,ST39,ST40));
     }
 
     public void New_Homework(View aView) {
