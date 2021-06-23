@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/tets9"
+    android:background="@drawable/img8463"
     tools:context=".NewHomework">
 
     <Button
@@ -41,8 +41,9 @@
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
-        android:text="@string/HM_Inform"
+        android:background="#7A0B0B0B"
 
+        android:text="@string/HM_Inform"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/HM_New_Date"
@@ -58,6 +59,7 @@
         android:layout_marginLeft="55dp"
         android:layout_marginEnd="51dp"
         android:layout_marginRight="51dp"
+        android:background="#7A0B0B0B"
         android:text="@string/HM_Name"
         android:textColor="@color/white"
         android:textSize="24sp"
@@ -111,6 +113,7 @@
         android:layout_marginLeft="55dp"
         android:layout_marginEnd="51dp"
         android:layout_marginRight="51dp"
+        android:background="#7A0B0B0B"
         android:text="@string/HM_Date"
         android:textColor="@color/white"
         android:textSize="24sp"
@@ -126,6 +129,7 @@
         android:layout_marginLeft="55dp"
         android:layout_marginEnd="51dp"
         android:layout_marginRight="51dp"
+        android:background="#7A0B0B0B"
         android:text="@string/HM_Class"
         android:textColor="@color/white"
         android:textSize="24sp"

@@ -24,7 +24,7 @@ public class EditSchoolTimetable extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        String ClassName_message = intent.getStringExtra("Class_MESSAGE");
+        String ClassName_message = intent.getStringExtra("ClassName_MESSAGE");
         EditText ST_Class = (EditText) findViewById(R.id.SchoolTimetable_Edit_Class);
         ST_Class.setText(ClassName_message);
         String Location_message = intent.getStringExtra("Location_MESSAGE");
