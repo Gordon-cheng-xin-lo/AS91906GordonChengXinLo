@@ -1,7 +1,7 @@
 package com.example.as91906gordonchengxinlo;
 
 import java.net.IDN;
-
+//  define value and their type
 public class HomeworkList {
     public int ID;
     public String Date;
@@ -9,6 +9,7 @@ public class HomeworkList {
     public String Name;
     public String Information;
 
+    //  apply value into list
     public HomeworkList(int ID,String Date,String ClassName, String Name, String Information){
         this.ID = ID;
         this.Date = Date;
@@ -17,6 +18,7 @@ public class HomeworkList {
         this.Information = Information;
     }
 
+    //  get function use in other page/activity
     public int getID() {
         return ID;
     }

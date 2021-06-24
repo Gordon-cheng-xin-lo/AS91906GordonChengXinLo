@@ -5,9 +5,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ResourceAPI_Database extends AppCompatActivity {
-
-
-
+    //set the object for page/activity
     private static final String LOGCAT_TAG = "weather";
     // Constants:
     final String Base_URL = "http://api.openweathermap.org/data/2.5/weather";
@@ -17,8 +15,8 @@ public class ResourceAPI_Database extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //  define the layout of the page/activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resource_api_database);
-
     }
 }

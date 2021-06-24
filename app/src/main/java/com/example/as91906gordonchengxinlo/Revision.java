@@ -8,18 +8,20 @@ import android.view.View;
 import android.widget.Button;
 
 public class Revision extends AppCompatActivity {
-
+    //set the object for page/activity
     Button HomeButton;
     Button Accountbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //  define the layout of the page/activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_revision);
+        //define the object in the xml
         HomeButton = findViewById(R.id.Revision_home_button);
         Accountbutton = findViewById(R.id.Revision_account_button);
     }
-
+    //  go through to next page/activity
     public void Return (View aView) {
         Intent Homepage_function = new Intent(this,MainActivity.class);
         startActivity(Homepage_function);

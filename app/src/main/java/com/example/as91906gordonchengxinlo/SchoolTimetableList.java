@@ -2,7 +2,7 @@ package com.example.as91906gordonchengxinlo;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-
+//  define value and their type
 public class SchoolTimetableList implements Parcelable {
     public int ID;
     public String Day;
@@ -11,6 +11,7 @@ public class SchoolTimetableList implements Parcelable {
     public String StartTime;
     public String EndTime;
 
+    //  apply value into list
     public SchoolTimetableList(int ID, String Day, String Location, String ClassName, String StartTime, String EndTime){
         this.ID = ID;
         this.Day = Day;
@@ -20,6 +21,7 @@ public class SchoolTimetableList implements Parcelable {
         this.EndTime = EndTime;
     }
 
+    //  apply value into list
     protected SchoolTimetableList(Parcel in) {
         ID = in.readInt();
         Day = in.readString();
@@ -41,6 +43,7 @@ public class SchoolTimetableList implements Parcelable {
         }
     };
 
+    //  get function use in other page/activity
     public int getSTID() {
         return ID;
     }

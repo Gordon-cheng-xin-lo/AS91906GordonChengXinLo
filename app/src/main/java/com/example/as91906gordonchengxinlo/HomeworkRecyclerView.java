@@ -21,12 +21,11 @@ import java.util.List;
 
 public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerView.ViewHolder>
 {
-
+    //define the object for recyclerview
     Context context;
     List<HomeworkList> mHomeworkLists;
 
-
-
+    //  apply value into list
     public HomeworkRecyclerView(Context context,List<HomeworkList> homeworkLists) {
         this.context = context;
         this.mHomeworkLists = homeworkLists;
@@ -34,6 +33,7 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
 
     @NonNull
     @Override
+    //set the object for recyclerview
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View view = layoutInflater.inflate(R.layout.homework_recycler_view,parent,false);
@@ -44,12 +44,7 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position)
     {
-        /*Got problem showing the content on the list solve it later on at school day
-         *        *
-         * setText is the correct function for the call but the call detail is having problem
-         * */
-
-
+        //  set text for the page/activity
         holder.DataView_Date.setText(mHomeworkLists.get(position).getDate());
         holder.DataView_ClassName.setText(mHomeworkLists.get(position).getClassName());
         holder.DataView_Name.setText(mHomeworkLists.get(position).getName());
@@ -59,11 +54,12 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
         holder.DataView_Name_Label.setText("Name");
         holder.DataView_Information_Label.setText("Detail");
         holder.EditHMButton.setOnClickListener(new View.OnClickListener() {
+            //  function go through to next page/activity
             @Override
             public void onClick(View v) {
                 Log.d("click","Click");
                 Intent Edit = new Intent(context,EditHomeWork.class);
-
+                //  get value from the page/activity
                 Edit.putExtra("Class_MESSAGE",mHomeworkLists.get(position).getClassName());
                 Edit.putExtra("Name_MESSAGE",mHomeworkLists.get(position).getName());
                 Edit.putExtra("Date_MESSAGE",mHomeworkLists.get(position).getDate());
@@ -74,30 +70,28 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
         });
         holder.DeleteHMButton.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("LongLogTag")
+            //  delete function
             @Override
             public void onClick(View v) {
 //                Log.d("Delete Button click>>>>>>>>>>>>>>>>>>>>>","Delete ButtonClick");
 
                 mHomeworkLists.toString();
                 String DeleteClass = String.valueOf(mHomeworkLists.get(position).getName());
-
-
+                //  set up a pop up window for the page/activity
                 AlertDialog.Builder Warning = new AlertDialog.Builder(context);
                 Warning.setMessage("Is that you want to Delete \n"+DeleteClass+" \nHomework Form the Phone");
                 Warning.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 //                        Log.d("Position of the list===================","The position of the string  value is " + position);
-
-
                     }
                 });
                 Warning.show();
-
             }
         });
     }
 
+    //set the length of recyclerview
     @Override
     public int getItemCount() {
         return mHomeworkLists.size();
@@ -105,6 +99,7 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
 
     public static class ViewHolder extends RecyclerView.ViewHolder
     {
+        //set the object for page/activity
         TextView DataView_Date;
         TextView DataView_Date_Label;
         TextView DataView_ClassName;
@@ -116,7 +111,7 @@ public class HomeworkRecyclerView extends RecyclerView.Adapter<HomeworkRecyclerV
         Button EditHMButton;
         Button DeleteHMButton;
 
-
+        //  define the layout of the page/activity
         ViewHolder(View itemView)
         {
             super(itemView);

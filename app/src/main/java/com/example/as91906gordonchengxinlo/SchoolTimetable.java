@@ -24,25 +24,26 @@ import java.util.Arrays;
 import java.util.List;
 
 public class SchoolTimetable extends AppCompatActivity {
-
+    //set the object for page/activity
     GridView gridView;
-
     int[] image = {R.drawable.img8458, R.drawable.img8460, R.drawable.img8461, R.drawable.img8463, R.drawable.img8464, R.drawable.img8465, R.drawable.img8467, R.drawable.img8468, R.drawable.img8471, R.drawable.img8472, R.drawable.img8474, R.drawable.img8475, R.drawable.img8478, R.drawable.img8483, R.drawable.img8484, R.drawable.img8485, R.drawable.img8493, R.drawable.img8494, R.drawable.img8495, R.drawable.img8458, R.drawable.img8460, R.drawable.img8463, R.drawable.img8464, R.drawable.img8465, R.drawable.img8467, R.drawable.img8468, R.drawable.img8471, R.drawable.img8472, R.drawable.img8474, R.drawable.img8475, R.drawable.img8478, R.drawable.img8483, R.drawable.img8484, R.drawable.img8485, R.drawable.img8493, R.drawable.img8494, R.drawable.img8495, R.drawable.img8495, R.drawable.img8458, R.drawable.img8460, R.drawable.img8461, R.drawable.img8463, R.drawable.img8464, R.drawable.img8465, R.drawable.img8467, R.drawable.img8468, R.drawable.img8471, R.drawable.img8472, R.drawable.img8474, R.drawable.img8475, R.drawable.img8478, R.drawable.img8483, R.drawable.img8484, R.drawable.img8485, R.drawable.img8493, R.drawable.img8494, R.drawable.img8495, R.drawable.img8458, R.drawable.img8460, R.drawable.img8463, R.drawable.img8464, R.drawable.img8465, R.drawable.img8467, R.drawable.img8468, R.drawable.img8471, R.drawable.img8472, R.drawable.img8474, R.drawable.img8475, R.drawable.img8478, R.drawable.img8483, R.drawable.img8484, R.drawable.img8485, R.drawable.img8493, R.drawable.img8494, R.drawable.img8495, R.drawable.img8495};
-
     public List<SchoolTimetableList> SchoolTimetableListsInformation = new ArrayList<SchoolTimetableList>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //  define the layout of the page/activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_school_timetable);
+        //  set the testing data
         fillSchoolTimetableListsInformation();
-//        DecimalFormat TimeFormST = new DecimalFormat("##:##");
+        //define the object in the xml
         gridView = findViewById(R.id.SchoolTimeTbale_GridView);
-
+        //define the object for recyclerview
         CustomerAdapter customerAdapter = new CustomerAdapter(SchoolTimetableListsInformation, image, this);
         gridView.setAdapter(customerAdapter);
     }
 
+    //  set the testing data into list
     private void fillSchoolTimetableListsInformation() {
         SchoolTimetableList ST1 = new SchoolTimetableList(1,"Wednesday","P1","PHT","6789","1111");
         SchoolTimetableList ST2 = new SchoolTimetableList(2,"Monday","B4","CSC","3747","5955");
@@ -85,29 +86,27 @@ public class SchoolTimetable extends AppCompatActivity {
         SchoolTimetableList ST39 = new SchoolTimetableList(19,"","","N2","1111","1111");
         SchoolTimetableList ST40 = new SchoolTimetableList(20,"Monday","J7","","1111","1111");
 
-
         SchoolTimetableListsInformation.addAll(Arrays.asList(ST1,ST2,ST3,ST4,ST5,ST6,ST7,ST8,ST9,ST10,ST11,ST12,ST13,ST14,ST15,ST16,ST17,ST18,ST19,ST20,ST21,ST22,ST23,ST24,ST25,ST26,ST27,ST28,ST29,ST30,ST31,ST32,ST33,ST34,ST35,ST36,ST37,ST38,ST39,ST40));
     }
-
+    //  go through to next page/activity
     public void New_Homework(View aView) {
         Intent New_Homework_Function = new Intent(this, NewSchoolTimeTable.class);
         startActivity(New_Homework_Function);
     }
-
+    //define the object for recyclerview
     public class CustomerAdapter extends BaseAdapter {
         private int[] imagesPhoto;
         private Context context;
         private List schoolTimetableListsInformation;
         private LayoutInflater layoutInflater;
-
-
+        //  apply value into list
         public CustomerAdapter(List<SchoolTimetableList> schoolTimetableListsInformation, int[] image, Context context) {
             this.schoolTimetableListsInformation = schoolTimetableListsInformation;
             this.imagesPhoto = image;
             this.context = context;
             this.layoutInflater = (LayoutInflater) context.getSystemService(LAYOUT_INFLATER_SERVICE);
         }
-
+        //set the length of gridview
         @Override
         public int getCount() {
             return SchoolTimetableListsInformation.size();
@@ -129,43 +128,42 @@ public class SchoolTimetable extends AppCompatActivity {
             if (view == null) {
                 view = layoutInflater.inflate(R.layout.schooltimetable_girdview, viewGroup, false);
             }
-
+            //  define the layout of the page/activity
             TextView ClassNameView = view.findViewById(R.id.ClassNameGirdView);
             TextView DayView = view.findViewById(R.id.ClassTimeGirdView);
             TextView LocationView = view.findViewById(R.id.ClassLocationGirdView);
             TextView StartingTimeView = view.findViewById(R.id.ClassStartTimeGirdView);
             TextView EndTimeView = view.findViewById(R.id.ClassEndTimeGirdView);
-//            ImageView imageView = view.findViewById(R.id.imageView);
-
-            Log.d("Size>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>", String.valueOf(SchoolTimetableListsInformation.get(i).getSTClassName().length()));
+//            Log.d("Size>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>", String.valueOf(SchoolTimetableListsInformation.get(i).getSTClassName().length()));
 
             if (i <= SchoolTimetableListsInformation.size()) {
                 if (SchoolTimetableListsInformation.get(i).getSTClassName().length() >= 1) {
-                    Log.d("Mission sucess", "Mission success!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+//                    Log.d("Mission sucess", "Mission success!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                    //  set text for the page/activity
                     ClassNameView.setText(SchoolTimetableListsInformation.get(i).getSTClassName());
                     DayView.setText(SchoolTimetableListsInformation.get(i).getDay());
                     LocationView.setText(SchoolTimetableListsInformation.get(i).getLocation());
                     StartingTimeView.setText(SchoolTimetableListsInformation.get(i).getStartTime());
                     EndTimeView.setText(SchoolTimetableListsInformation.get(i).getEndTime());
-//                    imageView.setImageResource(imagesPhoto[i]);
                     view.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
 //                            Log.d("View Clicked========", "view Name =======>" + SchoolTimetableListsInformation.get(i).getSTClassName());
+                            //  set up a pop up window for the page/activity
                             AlertDialog.Builder Detail = new AlertDialog.Builder(SchoolTimetable.this);
                             Detail.setMessage("Class ==>" + SchoolTimetableListsInformation.get(i).getSTClassName()+
                                     "\nDetail\nDay ==>" + SchoolTimetableListsInformation.get(i).getDay()+
                                     "\nLocation ==>" + SchoolTimetableListsInformation.get(i).getLocation()+
                                     "\nStart at ==>" + SchoolTimetableListsInformation.get(i).getStartTime()+
                                     "\nEnd in ==>" + SchoolTimetableListsInformation.get(i).getEndTime());
-
-
                             Detail.setPositiveButton("Edit Schedule", new DialogInterface.OnClickListener() {
+                                //  function go through to next page/activity
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
 //                                    Log.d("click", "Click");
 //                                    Log.d("click", SchoolTimetableListsInformation.get(i).getSTClassName() + SchoolTimetableListsInformation.get(i).getDay());
                                     Intent Edit = new Intent(context, EditSchoolTimetable.class);
+                                    //  get value from the page/activity
                                     Edit.putExtra("ClassName_MESSAGE", SchoolTimetableListsInformation.get(i).getSTClassName());
                                     Edit.putExtra("Location_MESSAGE", SchoolTimetableListsInformation.get(i).getLocation());
                                     Edit.putExtra("Day_MESSAGE", SchoolTimetableListsInformation.get(i).getDay());
@@ -189,14 +187,13 @@ public class SchoolTimetable extends AppCompatActivity {
             return view;
         }
     }
-
-
+    //  go through to next page/activity
     public void Homepage(View aView) {
         Intent Homepage_function = new Intent(this, MainActivity.class);
         startActivity(Homepage_function);
         finishAffinity();
     }
-
+    //  go through to next page/activity
     public void Return(View aView) {
         finish();
     }
