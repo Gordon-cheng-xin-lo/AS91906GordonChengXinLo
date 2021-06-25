@@ -45,13 +45,17 @@ public class Homework extends AppCompatActivity {
         HomeworkList HM3 = new HomeworkList(3,"5/5/2021","PHY","MACH","test");
         HomeworkList HM4 = new HomeworkList(4,"6/8/2021","PHT","Platelet","Internal");
         HomeworkList HM5 = new HomeworkList(4,"6/8/2021","DYV","1234567890","1234567890");
-        HomeworkList HM6 = new HomeworkList(1,"3/6/2021","CSC","Programming","15 credit");
-        HomeworkList HM7 = new HomeworkList(2,"4/6/2021","CAl","Complex Number","test");
-        HomeworkList HM8 = new HomeworkList(3,"5/5/2021","PHY","MACH","test");
-        HomeworkList HM9 = new HomeworkList(4,"6/8/2021","PHT","Platelet","Internal");
-        HomeworkList HM10 = new HomeworkList(4,"6/8/2021","BJY","1234567890","1234567890");
+        HomeworkList HM6 = new HomeworkList(4,"6/8/2021","BJY","Platelet","Boundary Test Cause Sample");
+        HomeworkList HM7 = new HomeworkList(4,"6/8/2021","","Platelet","Boundary Minimum Test Cause");
+        HomeworkList HM8 = new HomeworkList(4,"6/8/2021","B","Platelet","Boundary Minimum Test Cause");
+        HomeworkList HM9 = new HomeworkList(4,"6/8/2021","12345678901234","Platelet","Boundary Maximum Test Cause");
+        HomeworkList HM10 = new HomeworkList(4,"6/8/2021","12345678901234","Platelet","Boundary Maximum Test Cause");
+        HomeworkList HM11 = new HomeworkList(4,"6/8/2021","BJY","","Boundary Minimum Test Cause");
+        HomeworkList HM12 = new HomeworkList(4,"6/8/2021","BJY","P","Boundary Minimum Test Cause");
+        HomeworkList HM13 = new HomeworkList(4,"6/8/2021","BJY","12345678901234567890123456789","Boundary Maximum Test Cause");
+        HomeworkList HM14 = new HomeworkList(4,"6/8/2021","BJY","12345678901234567890123456789","Boundary Maximum Test Cause");
 
-        HomeworkListInformation.addAll(Arrays.asList(HM1,HM2,HM3,HM4,HM5,HM6,HM7,HM8,HM9,HM10));
+        HomeworkListInformation.addAll(Arrays.asList(HM1,HM2,HM3,HM4,HM5,HM6,HM7,HM8,HM9,HM10,HM11,HM12,HM13,HM14));
     }
     //  go through to next page/activity
     public void Homepage (View aView) {
