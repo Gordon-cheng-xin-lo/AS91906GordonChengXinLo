@@ -32,18 +32,37 @@ public class NewHomework extends AppCompatActivity {
         CharSequence Name =NewName.getText();
         CharSequence Date =NewDate.getText();
         CharSequence Inform =NewInform.getText();
-        //  set up a pop up window for the page/activity
-        AlertDialog.Builder Check = new AlertDialog.Builder(NewHomework.this);
-        Check.setMessage("Please make sure the value you change is correct below\n\nClass==>  "+Class+"\n\nDate==>  "+Date+"\n\nTitle==>  "+Name+"\n\nDetail==>  "+Inform);
-        Check.setPositiveButton("Leave", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                /*Update the date class  function and restart the activity
-                 * also update the homework activity*/
-                finish();
-            }
-        });
-        Check.show();
+        //  if statement to chek the edit text basic information have been fill
+        if (Class.length()==0 || Name.length()==0) {
+            //  set up a pop up window for the page/activity
+            AlertDialog.Builder Check = new AlertDialog.Builder(NewHomework.this);
+            Check.setMessage("Please make sure the \n   Class Name\n    Name of Homework\nis filled below");
+//            Check.setPositiveButton("Leave", new DialogInterface.OnClickListener() {
+//                @Override
+//                public void onClick(DialogInterface dialog, int which) {
+//                    /*Update the date class  function and restart the activity
+//                     * also update the homework activity*/
+//                    finish();
+//                }
+//            });
+            Check.show();
+        }
+        //  if statement to chek the edit text basic information have been fill
+        else if (Class.length()>0 && Name.length()>0) {
+            //  set up a pop up window for the page/activity
+            AlertDialog.Builder Check = new AlertDialog.Builder(NewHomework.this);
+            Check.setMessage("Please make sure the value you change is correct below\n\nClass==>  "+Class+"\n\nDate==>  "+Date+"\n\nTitle==>  "+Name+"\n\nDetail==>  "+Inform);
+            Check.setPositiveButton("Leave", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    /*Update the date class  function and restart the activity
+                     * also update the homework activity*/
+                    finish();
+                }
+            });
+            Check.show();
+        }
+
     }
     //  go through to next page/activity
     public void Leave(View aView) {

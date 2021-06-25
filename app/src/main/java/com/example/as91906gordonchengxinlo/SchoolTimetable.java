@@ -62,9 +62,9 @@ public class SchoolTimetable extends AppCompatActivity {
         SchoolTimetableList ST15 = new SchoolTimetableList(15,"Thursday","S5","CHE","5678","2452");
         SchoolTimetableList ST16 = new SchoolTimetableList(16,"Monday","B7","STA","2425","3563");
         SchoolTimetableList ST17 = new SchoolTimetableList(17,"Friday","N3","LSS","5699","3533");
-        SchoolTimetableList ST18 = new SchoolTimetableList(18,"Tuesday","V5","","4764","5785");
-        SchoolTimetableList ST19 = new SchoolTimetableList(19,"","","N2","4737","5785");
-        SchoolTimetableList ST20 = new SchoolTimetableList(20,"Monday","J7","","4567","5788");
+        SchoolTimetableList ST18 = new SchoolTimetableList(18,"Tuesday","V5","SDF","4764","5785");
+        SchoolTimetableList ST19 = new SchoolTimetableList(19,"Tuesday","N2","SDG","4737","5785");
+        SchoolTimetableList ST20 = new SchoolTimetableList(20,"Monday","J7","EWQ","4567","5788");
         SchoolTimetableList ST21 = new SchoolTimetableList(1,"Wednesday","P1","PHT","6574","4764");
         SchoolTimetableList ST22 = new SchoolTimetableList(2,"Monday","B4","CSC","4568","3733");
         SchoolTimetableList ST23 = new SchoolTimetableList(3,"Monday","N5","CAL","7367","4586");
@@ -82,9 +82,9 @@ public class SchoolTimetable extends AppCompatActivity {
         SchoolTimetableList ST35 = new SchoolTimetableList(15,"Thursday","S5","CHE","1111","1111");
         SchoolTimetableList ST36 = new SchoolTimetableList(16,"Monday","B7","STA","1111","1111");
         SchoolTimetableList ST37 = new SchoolTimetableList(17,"Friday","N3","LSS","1111","");
-        SchoolTimetableList ST38 = new SchoolTimetableList(18,"Tuesday","V5","","1111","");
+        SchoolTimetableList ST38 = new SchoolTimetableList(18,"Tuesday","V5","FSA","1111","");
         SchoolTimetableList ST39 = new SchoolTimetableList(19,"","","N2","1111","1111");
-        SchoolTimetableList ST40 = new SchoolTimetableList(20,"Monday","J7","","1111","1111");
+        SchoolTimetableList ST40 = new SchoolTimetableList(20,"Monday","J7","AFD","1111","1111");
 
         SchoolTimetableListsInformation.addAll(Arrays.asList(ST1,ST2,ST3,ST4,ST5,ST6,ST7,ST8,ST9,ST10,ST11,ST12,ST13,ST14,ST15,ST16,ST17,ST18,ST19,ST20,ST21,ST22,ST23,ST24,ST25,ST26,ST27,ST28,ST29,ST30,ST31,ST32,ST33,ST34,ST35,ST36,ST37,ST38,ST39,ST40));
     }

@@ -53,17 +53,36 @@ public class EditHomeWork extends AppCompatActivity {
         CharSequence Name =EditedName.getText();
         CharSequence Date =EditedDate.getText();
         CharSequence Inform =EditedInform.getText();
-        //  set up a pop up window for the page/activity
-        AlertDialog.Builder Check = new AlertDialog.Builder(EditHomeWork.this);
-        Check.setMessage("Please make sure the value is correct below"+"\n\nClass==>  "+Class+"\n\nDate==>  "+Date+"\n\nTitle==>  "+Name+"\n\nDetail==>  "+Inform);
-        Check.setPositiveButton("Save and Leave", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                finish();
-                /*update function to teh list*/
-            }
-        });
-        Check.show();
+        //  if statement to chek the edit text basic information have been fill
+        if (Class.length()==0 || Name.length()==0){
+            //  set up a pop up window for the page/activity
+            AlertDialog.Builder Check = new AlertDialog.Builder(EditHomeWork.this);
+            Check.setMessage("Please make sure the \n   Class Name\n    Name of Homework\nis filled below");
+//            Check.setPositiveButton("Save and Leave", new DialogInterface.OnClickListener() {
+//                @Override
+//                public void onClick(DialogInterface dialog, int which) {
+//                    finish();
+//                    /*update function to teh list*/
+//                }
+//            });
+            Check.show();
+        }
+        //  if statement to chek the edit text basic information have been fill
+        else if (Class.length()>0 && Name.length()>0) {
+            //  set up a pop up window for the page/activity
+            AlertDialog.Builder Check = new AlertDialog.Builder(EditHomeWork.this);
+            Check.setMessage("Please make sure the value is correct below"+"\n\nClass==>  "+Class+"\n\nDate==>  "+Date+"\n\nTitle==>  "+Name+"\n\nDetail==>  "+Inform);
+            Check.setPositiveButton("Save and Leave", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                    /*update function to teh list*/
+                }
+            });
+            Check.show();
+        }
+
+
     }
     //  go through to next page/activity
     public void Leave(View aView) {

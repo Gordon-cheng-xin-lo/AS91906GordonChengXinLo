@@ -44,9 +44,14 @@ public class Homework extends AppCompatActivity {
         HomeworkList HM2 = new HomeworkList(2,"4/6/2021","CAl","Complex Number","test");
         HomeworkList HM3 = new HomeworkList(3,"5/5/2021","PHY","MACH","test");
         HomeworkList HM4 = new HomeworkList(4,"6/8/2021","PHT","Platelet","Internal");
-        HomeworkList HM5 = new HomeworkList(4,"6/8/2021","1234567890","1234567890","1234567890");
+        HomeworkList HM5 = new HomeworkList(4,"6/8/2021","DYV","1234567890","1234567890");
+        HomeworkList HM6 = new HomeworkList(1,"3/6/2021","CSC","Programming","15 credit");
+        HomeworkList HM7 = new HomeworkList(2,"4/6/2021","CAl","Complex Number","test");
+        HomeworkList HM8 = new HomeworkList(3,"5/5/2021","PHY","MACH","test");
+        HomeworkList HM9 = new HomeworkList(4,"6/8/2021","PHT","Platelet","Internal");
+        HomeworkList HM10 = new HomeworkList(4,"6/8/2021","BJY","1234567890","1234567890");
 
-        HomeworkListInformation.addAll(Arrays.asList(HM1,HM2,HM3,HM4));
+        HomeworkListInformation.addAll(Arrays.asList(HM1,HM2,HM3,HM4,HM5,HM6,HM7,HM8,HM9,HM10));
     }
     //  go through to next page/activity
     public void Homepage (View aView) {
