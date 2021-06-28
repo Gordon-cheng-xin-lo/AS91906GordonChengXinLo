@@ -7,7 +7,7 @@ import android.webkit.WebView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class kamarwebvivew extends AppCompatActivity {
+public class Kamarwebvivew extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,13 +15,13 @@ public class kamarwebvivew extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kamarwebvivew);
         //define the object in the xml
-        WebView KamarWeb = findViewById(R.id.KamarWebView);
-        KamarWeb.loadUrl("https://kamarportal.mrgs.school.nz/index.php");
+        WebView kamarWeb = findViewById(R.id.KamarWebView);
+        kamarWeb.loadUrl("https://kamarportal.mrgs.school.nz/index.php");
     }
     //  go through to next page/activity
-    public void Homepage (View aView) {
-        Intent Homepage_function = new Intent(this,MainActivity.class);
-        startActivity(Homepage_function);
+    public void homepage(View aView) {
+        Intent homepageFunction = new Intent(this,MainActivity.class);
+        startActivity(homepageFunction);
         finishAffinity();
     }
     //  go through to next page/activity

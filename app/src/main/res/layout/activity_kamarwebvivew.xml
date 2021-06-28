@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/tets9"
-    tools:context=".kamarwebvivew">
+    tools:context=".Kamarwebvivew">
 
     <Button
         android:id="@+id/kamar_webview_return_button"
@@ -52,7 +52,7 @@
         android:layout_marginEnd="4dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="48dp"
-        android:onClick="Homepage"
+        android:onClick="homepage"
         android:text="@string/Home_button_name"
         android:textAllCaps="false"
         android:textSize="24sp"

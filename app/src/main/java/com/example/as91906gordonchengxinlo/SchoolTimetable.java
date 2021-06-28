@@ -89,9 +89,9 @@ public class SchoolTimetable extends AppCompatActivity {
         SchoolTimetableListsInformation.addAll(Arrays.asList(ST1,ST2,ST3,ST4,ST5,ST6,ST7,ST8,ST9,ST10,ST11,ST12,ST13,ST14,ST15,ST16,ST17,ST18,ST19,ST20,ST21,ST22,ST23,ST24,ST25,ST26,ST27,ST28,ST29,ST30,ST31,ST32,ST33,ST34,ST35,ST36,ST37,ST38,ST39,ST40));
     }
     //  go through to next page/activity
-    public void New_Homework(View aView) {
-        Intent New_Homework_Function = new Intent(this, NewSchoolTimeTable.class);
-        startActivity(New_Homework_Function);
+    public void newHomework(View aView) {
+        Intent newHomeworkFunction = new Intent(this, NewSchoolTimeTable.class);
+        startActivity(newHomeworkFunction);
     }
     //define the object for recyclerview
     public class CustomerAdapter extends BaseAdapter {
@@ -129,52 +129,52 @@ public class SchoolTimetable extends AppCompatActivity {
                 view = layoutInflater.inflate(R.layout.schooltimetable_girdview, viewGroup, false);
             }
             //  define the layout of the page/activity
-            TextView ClassNameView = view.findViewById(R.id.ClassNameGirdView);
-            TextView DayView = view.findViewById(R.id.ClassTimeGirdView);
-            TextView LocationView = view.findViewById(R.id.ClassLocationGirdView);
-            TextView StartingTimeView = view.findViewById(R.id.ClassStartTimeGirdView);
-            TextView EndTimeView = view.findViewById(R.id.ClassEndTimeGirdView);
+            TextView classNameView = view.findViewById(R.id.ClassNameGirdView);
+            TextView dayView = view.findViewById(R.id.ClassTimeGirdView);
+            TextView locationView = view.findViewById(R.id.ClassLocationGirdView);
+            TextView startingTimeView = view.findViewById(R.id.ClassStartTimeGirdView);
+            TextView endTimeView = view.findViewById(R.id.ClassEndTimeGirdView);
 //            Log.d("Size>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>", String.valueOf(SchoolTimetableListsInformation.get(i).getSTClassName().length()));
 
             if (i <= SchoolTimetableListsInformation.size()) {
                 if (SchoolTimetableListsInformation.get(i).getSTClassName().length() >= 1) {
 //                    Log.d("Mission sucess", "Mission success!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
                     //  set text for the page/activity
-                    ClassNameView.setText(SchoolTimetableListsInformation.get(i).getSTClassName());
-                    DayView.setText(SchoolTimetableListsInformation.get(i).getDay());
-                    LocationView.setText(SchoolTimetableListsInformation.get(i).getLocation());
-                    StartingTimeView.setText(SchoolTimetableListsInformation.get(i).getStartTime());
-                    EndTimeView.setText(SchoolTimetableListsInformation.get(i).getEndTime());
+                    classNameView.setText(SchoolTimetableListsInformation.get(i).getSTClassName());
+                    dayView.setText(SchoolTimetableListsInformation.get(i).getDay());
+                    locationView.setText(SchoolTimetableListsInformation.get(i).getLocation());
+                    startingTimeView.setText(SchoolTimetableListsInformation.get(i).getStartTime());
+                    endTimeView.setText(SchoolTimetableListsInformation.get(i).getEndTime());
                     view.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
 //                            Log.d("View Clicked========", "view Name =======>" + SchoolTimetableListsInformation.get(i).getSTClassName());
                             //  set up a pop up window for the page/activity
-                            AlertDialog.Builder Detail = new AlertDialog.Builder(SchoolTimetable.this);
-                            Detail.setMessage("Class ==>" + SchoolTimetableListsInformation.get(i).getSTClassName()+
-                                    "\nDetail\nDay ==>" + SchoolTimetableListsInformation.get(i).getDay()+
+                            AlertDialog.Builder detail = new AlertDialog.Builder(SchoolTimetable.this);
+                            detail.setMessage("Class ==>" + SchoolTimetableListsInformation.get(i).getSTClassName()+
+                                    "\ndetail\nDay ==>" + SchoolTimetableListsInformation.get(i).getDay()+
                                     "\nLocation ==>" + SchoolTimetableListsInformation.get(i).getLocation()+
                                     "\nStart at ==>" + SchoolTimetableListsInformation.get(i).getStartTime()+
                                     "\nEnd in ==>" + SchoolTimetableListsInformation.get(i).getEndTime());
-                            Detail.setPositiveButton("Edit Schedule", new DialogInterface.OnClickListener() {
+                            detail.setPositiveButton("Edit Schedule", new DialogInterface.OnClickListener() {
                                 //  function go through to next page/activity
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
 //                                    Log.d("click", "Click");
 //                                    Log.d("click", SchoolTimetableListsInformation.get(i).getSTClassName() + SchoolTimetableListsInformation.get(i).getDay());
-                                    Intent Edit = new Intent(context, EditSchoolTimetable.class);
+                                    Intent edit = new Intent(context, EditSchoolTimetable.class);
                                     //  get value from the page/activity
-                                    Edit.putExtra("ClassName_MESSAGE", SchoolTimetableListsInformation.get(i).getSTClassName());
-                                    Edit.putExtra("Location_MESSAGE", SchoolTimetableListsInformation.get(i).getLocation());
-                                    Edit.putExtra("Day_MESSAGE", SchoolTimetableListsInformation.get(i).getDay());
-                                    Edit.putExtra("StartTime_MESSAGE", SchoolTimetableListsInformation.get(i).getStartTime());
-                                    Edit.putExtra("EndTime_MESSAGE", SchoolTimetableListsInformation.get(i).getEndTime());
-                                    Edit.putExtra("Position_MESSAGE", i);
+                                    edit.putExtra("ClassName_MESSAGE", SchoolTimetableListsInformation.get(i).getSTClassName());
+                                    edit.putExtra("Location_MESSAGE", SchoolTimetableListsInformation.get(i).getLocation());
+                                    edit.putExtra("Day_MESSAGE", SchoolTimetableListsInformation.get(i).getDay());
+                                    edit.putExtra("StartTime_MESSAGE", SchoolTimetableListsInformation.get(i).getStartTime());
+                                    edit.putExtra("EndTime_MESSAGE", SchoolTimetableListsInformation.get(i).getEndTime());
+                                    edit.putExtra("Position_MESSAGE", i);
 //                                    Log.d("click>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>", SchoolTimetableListsInformation.get(i).getSTClassName() + "\n" + SchoolTimetableListsInformation.get(i).getLocation() + "\n" + SchoolTimetableListsInformation.get(i).getDay() + "\n" + SchoolTimetableListsInformation.get(i).getStartTime() + "\n" + SchoolTimetableListsInformation.get(i).getEndTime() + "\n" + i);
-                                    context.startActivity(Edit);
+                                    context.startActivity(edit);
                                 }
                             });
-                            Detail.show();
+                            detail.show();
                         }
                     });
                 } else {
@@ -188,9 +188,9 @@ public class SchoolTimetable extends AppCompatActivity {
         }
     }
     //  go through to next page/activity
-    public void Homepage(View aView) {
-        Intent Homepage_function = new Intent(this, MainActivity.class);
-        startActivity(Homepage_function);
+    public void homepage(View aView) {
+        Intent homepageFunction = new Intent(this, MainActivity.class);
+        startActivity(homepageFunction);
         finishAffinity();
     }
     //  go through to next page/activity

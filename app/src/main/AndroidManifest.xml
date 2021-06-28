@@ -18,7 +18,7 @@
         <activity android:name=".NewSchoolTimeTable" />
         <activity android:name=".EditHomeWork" />
         <activity android:name=".NewHomework" />
-        <activity android:name=".kamarwebvivew" />
+        <activity android:name=".Kamarwebvivew" />
         <activity android:name=".Homework" />
         <activity android:name=".SchoolTimetable" />
         <activity android:name=".Resource" />

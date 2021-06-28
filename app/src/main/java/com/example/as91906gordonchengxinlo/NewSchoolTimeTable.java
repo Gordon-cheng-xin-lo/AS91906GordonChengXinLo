@@ -17,64 +17,64 @@ public class NewSchoolTimeTable extends AppCompatActivity {
         setContentView(R.layout.activity_new_school_time_table);
     }
 
-    public void Save_change(View aView) {
+    public void saveChange(View aView) {
         /*
          * up data the setting by the get value and update to the list by showing the text view
          * */
         //define the object in the xml
-        TextView EditedClass = (TextView)findViewById(R.id.SchoolTimetable_New_Class);
-        TextView EditedDay = (TextView)findViewById(R.id.SchoolTimetable_New_Day);
-        TextView EditedLocation = (TextView)findViewById(R.id.SchoolTimetable_New_Location);
-        TextView EditedStartTime = (TextView)findViewById(R.id.SchoolTimetable_New_Starting_time);
-        TextView EditedEndTime = (TextView)findViewById(R.id.SchoolTimetable_New_Ending_time);
+        TextView editedClass = (TextView)findViewById(R.id.SchoolTimetable_New_Class);
+        TextView editedDay = (TextView)findViewById(R.id.SchoolTimetable_New_Day);
+        TextView editedLocation = (TextView)findViewById(R.id.SchoolTimetable_New_Location);
+        TextView editedStartTime = (TextView)findViewById(R.id.SchoolTimetable_New_Starting_time);
+        TextView editedEndTime = (TextView)findViewById(R.id.SchoolTimetable_New_Ending_time);
         //  get value from the page/activity
-        CharSequence Class =EditedClass.getText();
-        CharSequence Day =EditedDay.getText();
-        CharSequence Location =EditedLocation.getText();
-        CharSequence StartTime =EditedStartTime.getText();
-        CharSequence EndTime =EditedEndTime.getText();
+        CharSequence classText =editedClass.getText();
+        CharSequence day =editedDay.getText();
+        CharSequence location =editedLocation.getText();
+        CharSequence startTime =editedStartTime.getText();
+        CharSequence endTime =editedEndTime.getText();
                 /*
                 up date the list in teh view class
 
                 */
-        if (Class.length()==0 || Day.length()==0 || Location.length()==0){
+        if (classText.length()==0 || day.length()==0 || location.length()==0){
             //  set up a pop up window for the page/activity
-            AlertDialog.Builder Check = new AlertDialog.Builder(NewSchoolTimeTable.this);
-            Check.setMessage("Please make sure the \n   Class Name\n    Location of Class\n    Day of Class\nis filled below");
-//            Check.setPositiveButton("Save and Leave", new DialogInterface.OnClickListener() {
+            AlertDialog.Builder check = new AlertDialog.Builder(NewSchoolTimeTable.this);
+            check.setMessage("Please make sure the \n   classText Name\n    location of classText\n    day of classText\nis filled below");
+//            check.setPositiveButton("Save and Leave", new DialogInterface.OnClickListener() {
 //                @Override
 //                public void onClick(DialogInterface dialog, int which) {
 //                    finish();
 //                    /*update function to teh list*/
 //                }
 //            });
-            Check.show();
+            check.show();
         }
         //  if statement to chek the edit text basic information have been fill
-        else if (Class.length()>0 && Day.length()>0 && Location.length()>0) {
+        else if (classText.length()>0 && day.length()>0 && location.length()>0) {
             //  set up a pop up window for the page/activity
-            AlertDialog.Builder Check = new AlertDialog.Builder(NewSchoolTimeTable.this);
-            Check.setMessage("Please make sure the value is correct below"+"\n\nClass==>  "+Class+"\n\nClass Day==>  "+Day+"\n\nLocation==>  "+Location+"\n\nStart At==>  "+StartTime+"\n\nEnd In==>  "+EndTime);
-            Check.setPositiveButton("Save and Leave", new DialogInterface.OnClickListener() {
+            AlertDialog.Builder check = new AlertDialog.Builder(NewSchoolTimeTable.this);
+            check.setMessage("Please make sure the value is correct below"+"\n\nclassText==>  "+classText+"\n\nclassText day==>  "+day+"\n\nlocation==>  "+location+"\n\nStart At==>  "+startTime+"\n\nEnd In==>  "+endTime);
+            check.setPositiveButton("Save and Leave", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     finish();
                     /*update function to teh list*/
                 }
             });
-            Check.show();
+            check.show();
         }
     }
     //  go through to next page/activity
-    public void Leave(View aView) {
-        AlertDialog.Builder Warning = new AlertDialog.Builder(NewSchoolTimeTable.this);
-        Warning.setMessage("Is that you want to leave and Not save the change");
-        Warning.setPositiveButton("Leave", new DialogInterface.OnClickListener() {
+    public void leave(View aView) {
+        AlertDialog.Builder warning = new AlertDialog.Builder(NewSchoolTimeTable.this);
+        warning.setMessage("Is that you want to leave and Not save the change");
+        warning.setPositiveButton("Leave", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 finish();
             }
         });
-        Warning.show();
+        warning.show();
     }
 }

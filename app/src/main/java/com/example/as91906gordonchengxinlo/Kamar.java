@@ -9,8 +9,8 @@ import android.widget.Button;
 
 public class Kamar extends AppCompatActivity {
     //set the object for page/activity
-    Button HomeButton;
-    Button Accountbutton;
+    Button mHomeButton;
+    Button mAccountbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,18 +18,18 @@ public class Kamar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kamar);
         //define the object in the xml
-        HomeButton = findViewById(R.id.Kamar_home_button);
-        Accountbutton = findViewById(R.id.Kamar_account_button);
+        mHomeButton = findViewById(R.id.Kamar_home_button);
+        mAccountbutton = findViewById(R.id.Kamar_account_button);
     }
     //  go through to next page/activity
-    public void WebViewKamar (View aView) {
-        Intent Web_Kamar = new Intent(this,kamarwebvivew.class);
-        startActivity(Web_Kamar);
+    public void webViewKamar(View aView) {
+        Intent webKamar = new Intent(this, Kamarwebvivew.class);
+        startActivity(webKamar);
     }
     //  go through to next page/activity
     public void Return (View aView) {
-        Intent Homepage_function = new Intent(this,MainActivity.class);
-        startActivity(Homepage_function);
+        Intent homepageFunction = new Intent(this,MainActivity.class);
+        startActivity(homepageFunction);
         finishAffinity();
     }
 }

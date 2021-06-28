@@ -9,11 +9,11 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     //set the object for page/activity
-    Button TimeTableButton;
-    Button ContentShareButton;
-    Button RevisionButton;
-    Button KamarButton;
-    Button AccountButton;
+    Button mTimeTableButton;
+    Button mContentShareButton;
+    Button mRevisionButton;
+    Button mKamarButton;
+    Button mAccountButton;
     int Set = 0;
 
     @Override
@@ -27,32 +27,32 @@ public class MainActivity extends AppCompatActivity {
             
         }
         //define the object in the xml
-        TimeTableButton = findViewById(R.id.TimeTable_button);
-        ContentShareButton = findViewById(R.id.ContentShare_button);
-        RevisionButton = findViewById(R.id.Revision_button);
-        KamarButton = findViewById(R.id.Kamar_button);
-        AccountButton = findViewById(R.id.Account_button);
+        mTimeTableButton = findViewById(R.id.TimeTable_button);
+        mContentShareButton = findViewById(R.id.ContentShare_button);
+        mRevisionButton = findViewById(R.id.Revision_button);
+        mKamarButton = findViewById(R.id.Kamar_button);
+        mAccountButton = findViewById(R.id.Account_button);
     }
 
     //  go through to next page/activity
-    public void Timetable_layer (View aView) {
-        Intent Timetable = new Intent(this,Timetable.class);
-        startActivity(Timetable);
+    public void timetableLayer(View aView) {
+        Intent timetable = new Intent(this,Timetable.class);
+        startActivity(timetable);
     }
     //  go through to next page/activity
-    public void Resource_layer (View aView) {
-        Intent Resource = new Intent(this,Resource.class);
-        startActivity(Resource);
+    public void resourceLayer(View aView) {
+        Intent resource = new Intent(this,Resource.class);
+        startActivity(resource);
     }
     //  go through to next page/activity
-    public void Revision_layer (View aView) {
-        Intent Revision = new Intent(this,Revision.class);
-        startActivity(Revision);
+    public void revisionLayer(View aView) {
+        Intent revision = new Intent(this,Revision.class);
+        startActivity(revision);
     }
     //  go through to next page/activity
-    public void Kamar_layer (View aView) {
-        Intent Kamar = new Intent(this,Kamar.class);
-        startActivity(Kamar);
+    public void kamarLayer(View aView) {
+        Intent kamar = new Intent(this,Kamar.class);
+        startActivity(kamar);
     }
 
 /*    public void Account_setting (View aView) {

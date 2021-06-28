@@ -9,8 +9,8 @@ import android.widget.Button;
 
 public class Revision extends AppCompatActivity {
     //set the object for page/activity
-    Button HomeButton;
-    Button Accountbutton;
+    Button mHomeButton;
+    Button mAccountbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,13 +18,13 @@ public class Revision extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_revision);
         //define the object in the xml
-        HomeButton = findViewById(R.id.Revision_home_button);
-        Accountbutton = findViewById(R.id.Revision_account_button);
+        mHomeButton = findViewById(R.id.Revision_home_button);
+        mAccountbutton = findViewById(R.id.Revision_account_button);
     }
     //  go through to next page/activity
     public void Return (View aView) {
-        Intent Homepage_function = new Intent(this,MainActivity.class);
-        startActivity(Homepage_function);
+        Intent homepageFunction = new Intent(this,MainActivity.class);
+        startActivity(homepageFunction);
         finishAffinity();
     }
 }

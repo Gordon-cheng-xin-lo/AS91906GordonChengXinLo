@@ -59,14 +59,14 @@ public class Homework extends AppCompatActivity {
     }
     //  go through to next page/activity
     public void Homepage (View aView) {
-        Intent Homepage_function = new Intent(this,MainActivity.class);
-        startActivity(Homepage_function);
+        Intent homepageFunction = new Intent(this,MainActivity.class);
+        startActivity(homepageFunction);
         finishAffinity();
     }
     //  go through to next page/activity
-    public void New_Homework(View aView) {
-        Intent New_Homework_Function = new Intent(this,NewHomework.class);
-        startActivity(New_Homework_Function);
+    public void newHomework(View aView) {
+        Intent newHomeworkFunction = new Intent(this,NewHomework.class);
+        startActivity(newHomeworkFunction);
     }
 /*    public void Edit_Homework(View aView) {
         Log.d("Edit"," Click");

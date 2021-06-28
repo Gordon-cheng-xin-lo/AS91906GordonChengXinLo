@@ -21,80 +21,80 @@ public class EditHomeWork extends AppCompatActivity {
         setContentView(R.layout.activity_edit_home_work);
         //  get value form the previous page/activity(HomeworkRecyclerView.class)
         Intent intent = getIntent();
-        String Name_message = intent.getStringExtra("Name_MESSAGE");
-        String Class_message = intent.getStringExtra("Class_MESSAGE");
-        String Date_message = intent.getStringExtra("Date_MESSAGE");
-        String Inform_message = intent.getStringExtra("Inform_MESSAGE");
-//        Log.d("Check Data >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>",Name_message+"\n"+Class_message+"\n"+Date_message+"\n"+Inform_message);
+        String name_message = intent.getStringExtra("Name_MESSAGE");
+        String class_message = intent.getStringExtra("Class_MESSAGE");
+        String date_message = intent.getStringExtra("Date_MESSAGE");
+        String inform_message = intent.getStringExtra("Inform_MESSAGE");
+//        Log.d("Check Data >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>",name_message+"\n"+class_message+"\n"+date_message+"\n"+inform_message);
         //  define the layout and set text for the page/activity
-        EditText HM_Date = (EditText) findViewById(R.id.HM_Edit_Date);
-        HM_Date.setText(Date_message);
-        EditText HM_Class = (EditText) findViewById(R.id.HM_Edit_Class);
-        HM_Class.setText(Class_message);
-        EditText HM_Name = (EditText) findViewById(R.id.HM_Edit_Title);
-        HM_Name.setText(Name_message);
-        EditText HM_Inform = (EditText) findViewById(R.id.HM_Edit_Information);
-        HM_Inform.setText(Inform_message);
+        EditText hmDate = (EditText) findViewById(R.id.HM_Edit_Date);
+        hmDate.setText(date_message);
+        EditText hmClass = (EditText) findViewById(R.id.HM_Edit_Class);
+        hmClass.setText(class_message);
+        EditText hmName = (EditText) findViewById(R.id.HM_Edit_Title);
+        hmName.setText(name_message);
+        EditText hmInform = (EditText) findViewById(R.id.HM_Edit_Information);
+        hmInform.setText(inform_message);
     }
 
     //  get data and go through to next page/activity
-    public void Save_change(View aView) {
+    public void saveChange(View aView) {
         /*
          * up data the setting by the get value and update to the list by showing the text view
          * */
         /*Edit.putExtra()*/
         //  define the layout of the page/activity
-        TextView EditedClass = (TextView)findViewById(R.id.HM_Edit_Class);
-        TextView EditedName = (TextView)findViewById(R.id.HM_Edit_Title);
-        TextView EditedDate = (TextView)findViewById(R.id.HM_Edit_Date);
-        TextView EditedInform = (TextView)findViewById(R.id.HM_Edit_Information);
+        TextView editedClass = (TextView)findViewById(R.id.HM_Edit_Class);
+        TextView editedName = (TextView)findViewById(R.id.HM_Edit_Title);
+        TextView editedDate = (TextView)findViewById(R.id.HM_Edit_Date);
+        TextView editedInform = (TextView)findViewById(R.id.HM_Edit_Information);
         //  get value from the page/activity
-        CharSequence Class =EditedClass.getText();
-        CharSequence Name =EditedName.getText();
-        CharSequence Date =EditedDate.getText();
-        CharSequence Inform =EditedInform.getText();
+        CharSequence classText =editedClass.getText();
+        CharSequence name =editedName.getText();
+        CharSequence date =editedDate.getText();
+        CharSequence inform =editedInform.getText();
         //  if statement to chek the edit text basic information have been fill
-        if (Class.length()==0 || Name.length()==0){
+        if (classText.length()==0 || name.length()==0){
             //  set up a pop up window for the page/activity
-            AlertDialog.Builder Check = new AlertDialog.Builder(EditHomeWork.this);
-            Check.setMessage("Please make sure the \n   Class Name\n    Name of Homework\nis filled below");
-//            Check.setPositiveButton("Save and Leave", new DialogInterface.OnClickListener() {
+            AlertDialog.Builder check = new AlertDialog.Builder(EditHomeWork.this);
+            check.setMessage("Please make sure the \n   classText name\n    name of Homework\nis filled below");
+//            check.setPositiveButton("Save and Leave", new DialogInterface.OnClickListener() {
 //                @Override
 //                public void onClick(DialogInterface dialog, int which) {
 //                    finish();
 //                    /*update function to teh list*/
 //                }
 //            });
-            Check.show();
+            check.show();
         }
         //  if statement to chek the edit text basic information have been fill
-        else if (Class.length()>0 && Name.length()>0) {
+        else if (classText.length()>0 && name.length()>0) {
             //  set up a pop up window for the page/activity
-            AlertDialog.Builder Check = new AlertDialog.Builder(EditHomeWork.this);
-            Check.setMessage("Please make sure the value is correct below"+"\n\nClass==>  "+Class+"\n\nDate==>  "+Date+"\n\nTitle==>  "+Name+"\n\nDetail==>  "+Inform);
-            Check.setPositiveButton("Save and Leave", new DialogInterface.OnClickListener() {
+            AlertDialog.Builder check = new AlertDialog.Builder(EditHomeWork.this);
+            check.setMessage("Please make sure the value is correct below"+"\n\nclassText==>  "+classText+"\n\ndate==>  "+date+"\n\nTitle==>  "+name+"\n\nDetail==>  "+inform);
+            check.setPositiveButton("Save and Leave", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     finish();
                     /*update function to teh list*/
                 }
             });
-            Check.show();
+            check.show();
         }
 
 
     }
     //  go through to next page/activity
-    public void Leave(View aView) {
+    public void leave(View aView) {
         //  set up a pop up window for the page/activity
-        AlertDialog.Builder Warning = new AlertDialog.Builder(EditHomeWork.this);
-        Warning.setMessage("Is that you want to leave and Not save the change");
-        Warning.setPositiveButton("Leave", new DialogInterface.OnClickListener() {
+        AlertDialog.Builder warning = new AlertDialog.Builder(EditHomeWork.this);
+        warning.setMessage("Is that you want to leave and Not save the change");
+        warning.setPositiveButton("Leave", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 finish();
             }
         });
-        Warning.show();
+        warning.show();
     }
 }
