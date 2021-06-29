@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     Button mRevisionButton;
     Button mKamarButton;
     Button mAccountButton;
-    int Set = 0;
+    int mSet = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //this is the part leave for further development
-        if (Set==0){
-            Set=1;
+        if (mSet ==0){
+            mSet =1;
             
         }
         //define the object in the xml
