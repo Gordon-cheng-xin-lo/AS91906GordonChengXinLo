@@ -148,7 +148,7 @@
         android:contentDescription="@string/HM_Date"
         android:hint="@string/HM_Date"
         android:inputType="date"
-        android:maxLength="8"
+        android:maxLength="10"
         android:textColor="@color/white"
         android:textColorHint="#FFFFFF"
         android:textSize="24sp"

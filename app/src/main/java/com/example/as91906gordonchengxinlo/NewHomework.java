@@ -57,7 +57,7 @@ public class NewHomework extends AppCompatActivity {
                 public void onClick(DialogInterface dialog, int which) {
                     /*Update the date class  function and restart the activity
                      * also update the homework activity*/
-                    HomeworkList HM1 = new HomeworkList(1, (String) date, (String) classText, (String) name, (String) inform);
+//                    HomeworkList HM1 = new HomeworkList(1, (String) date, (String) classText, (String) name, (String) inform);
 //                    set update function on list
 
                     finish();

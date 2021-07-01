@@ -74,13 +74,13 @@ public class EditSchoolTimetable extends AppCompatActivity {
             //  set up a pop up window for the page/activity
             AlertDialog.Builder check = new AlertDialog.Builder(EditSchoolTimetable.this);
             check.setMessage("Please make sure the value is correct below"+"\n\nclassText==>  "+classText+"\n\nclassText day==>  "+day+"\n\nlocation==>  "+location+"\n\nStart At==>  "+startTime+"\n\nEnd In==>  "+endTime);
-//            check.setPositiveButton("Save and Leave", new DialogInterface.OnClickListener() {
-//                @Override
-//                public void onClick(DialogInterface dialog, int which) {
-//                    finish();
-//                    /*update function to teh list*/
-//                }
-//            });
+            check.setPositiveButton("Save and Leave", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                    /*update function to teh list*/
+                }
+            });
             check.show();
         }
 
