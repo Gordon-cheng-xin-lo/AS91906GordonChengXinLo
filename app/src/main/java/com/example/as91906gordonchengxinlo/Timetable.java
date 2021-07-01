@@ -29,7 +29,7 @@ public class Timetable extends AppCompatActivity {
         finishAffinity();
     }
     //  go through to next page/activity
-    public void scooltimetable(View aView) {
+    public void schooltimetable(View aView) {
         Intent schooltimetableFunction = new Intent(this,SchoolTimetable.class);
         startActivity(schooltimetableFunction);
     }

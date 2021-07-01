@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         //this is the part leave for further development
         if (mSet ==0){
             mSet =1;
-            
         }
         //define the object in the xml
         mTimeTableButton = findViewById(R.id.TimeTable_button);
@@ -45,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(resource);
     }
     //  go through to next page/activity
-    public void revisionLayer(View aView) {
+        public void revisionLayer(View aView) {
         Intent revision = new Intent(this,Revision.class);
         startActivity(revision);
     }

@@ -162,8 +162,6 @@
         android:layout_marginRight="40dp"
         android:background="#92000000"
         android:contentDescription="@string/HM_Date"
-        android:hint="@string/SchoolTimeTable_Date"
-        android:inputType="date"
         android:maxLength="9"
         android:textColor="@color/white"
         android:textColorHint="#FFFFFF"

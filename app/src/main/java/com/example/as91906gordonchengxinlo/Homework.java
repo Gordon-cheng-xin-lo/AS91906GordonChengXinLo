@@ -58,7 +58,7 @@ public class Homework extends AppCompatActivity {
         HomeworkListInformation.addAll(Arrays.asList(HM1,HM2,HM3,HM4,HM5,HM6,HM7,HM8,HM9,HM10,HM11,HM12,HM13,HM14));
     }
     //  go through to next page/activity
-    public void Homepage (View aView) {
+    public void homepage (View aView) {
         Intent homepageFunction = new Intent(this,MainActivity.class);
         startActivity(homepageFunction);
         finishAffinity();

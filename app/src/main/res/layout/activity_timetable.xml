@@ -70,7 +70,7 @@
         android:layout_marginEnd="48dp"
         android:layout_marginRight="48dp"
         android:layout_marginBottom="58dp"
-        android:onClick="scooltimetable"
+        android:onClick="schooltimetable"
         android:text="@string/SchoolTimetable_button_name"
         android:textSize="30sp"
         app:backgroundTint="#C444595E"

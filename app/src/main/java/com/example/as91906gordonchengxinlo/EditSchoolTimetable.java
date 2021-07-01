@@ -66,13 +66,7 @@ public class EditSchoolTimetable extends AppCompatActivity {
             //  set up a pop up window for the page/activity
             AlertDialog.Builder check = new AlertDialog.Builder(EditSchoolTimetable.this);
             check.setMessage("Please make sure the \n   classText Name\n    location of classText\n    day of classText\nis filled below");
-//            check.setPositiveButton("Save and Leave", new DialogInterface.OnClickListener() {
-//                @Override
-//                public void onClick(DialogInterface dialog, int which) {
-//                    finish();
-//                    /*update function to teh list*/
-//                }
-//            });
+
             check.show();
         }
         //  if statement to chek the edit text basic information have been fill
