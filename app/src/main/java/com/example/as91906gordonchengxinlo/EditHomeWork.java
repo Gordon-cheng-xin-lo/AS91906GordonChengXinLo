@@ -57,7 +57,7 @@ public class EditHomeWork extends AppCompatActivity {
         if (classText.length()==0 || name.length()==0){
             //  set up a pop up window for the page/activity
             AlertDialog.Builder check = new AlertDialog.Builder(EditHomeWork.this);
-            check.setMessage("Please make sure the \n   classText name\n    name of Homework\nis filled below");
+            check.setMessage("Please make sure the \n   class name\n    name of Homework\nis filled below");
 //            check.setPositiveButton("Save and Leave", new DialogInterface.OnClickListener() {
 //                @Override
 //                public void onClick(DialogInterface dialog, int which) {
